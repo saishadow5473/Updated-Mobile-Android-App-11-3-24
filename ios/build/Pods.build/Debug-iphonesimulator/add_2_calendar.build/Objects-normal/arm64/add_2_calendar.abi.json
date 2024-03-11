@@ -1,0 +1,535 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "EventKit",
+      "printedName": "EventKit",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar"
+    },
+    {
+      "kind": "Import",
+      "name": "EventKitUI",
+      "printedName": "EventKitUI",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar"
+    },
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar"
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar"
+    },
+    {
+      "kind": "Import",
+      "name": "add_2_calendar",
+      "printedName": "add_2_calendar",
+      "declKind": "Import",
+      "moduleName": "add_2_calendar",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "Var",
+      "name": "statusBarStyle",
+      "printedName": "statusBarStyle",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "UIStatusBarStyle",
+          "printedName": "UIKit.UIStatusBarStyle",
+          "usr": "c:@E@UIStatusBarStyle"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:14add_2_calendar14statusBarStyleSo08UIStatusdE0Vvp",
+      "mangledName": "$s14add_2_calendar14statusBarStyleSo08UIStatusdE0Vvp",
+      "moduleName": "add_2_calendar",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SwiftAdd2CalendarPlugin",
+      "printedName": "SwiftAdd2CalendarPlugin",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "register",
+          "printedName": "register(with:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterPluginRegistrar",
+              "printedName": "Flutter.FlutterPluginRegistrar",
+              "usr": "c:objc(pl)FlutterPluginRegistrar"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@add_2_calendar@objc(cs)SwiftAdd2CalendarPlugin(cm)registerWithRegistrar:",
+          "mangledName": "$s14add_2_calendar23SwiftAdd2CalendarPluginC8register4withySo07FlutterF9Registrar_p_tFZ",
+          "moduleName": "add_2_calendar",
+          "static": true,
+          "objc_name": "registerWithRegistrar:",
+          "declAttributes": [
+            "Final",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "handle",
+          "printedName": "handle(_:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@add_2_calendar@objc(cs)SwiftAdd2CalendarPlugin(im)handleMethodCall:result:",
+          "mangledName": "$s14add_2_calendar23SwiftAdd2CalendarPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF",
+          "moduleName": "add_2_calendar",
+          "isOpen": true,
+          "objc_name": "handleMethodCall:result:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "presentCalendarModalToAddEvent",
+          "printedName": "presentCalendarModalToAddEvent(_:eventStore:completion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "EKEvent",
+              "printedName": "EventKit.EKEvent",
+              "usr": "c:objc(cs)EKEvent"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "EKEventStore",
+              "printedName": "EventKit.EKEventStore",
+              "usr": "c:objc(cs)EKEventStore"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "((Swift.Bool) -> ())?",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(Swift.Bool) -> ()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ]
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:14add_2_calendar23SwiftAdd2CalendarPluginC07presentE15ModalToAddEvent_10eventStore10completionySo7EKEventC_So0oM0CySbcSgtF",
+          "mangledName": "$s14add_2_calendar23SwiftAdd2CalendarPluginC07presentE15ModalToAddEvent_10eventStore10completionySo7EKEventC_So0oM0CySbcSgtF",
+          "moduleName": "add_2_calendar",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "presentEventCalendarDetailModal",
+          "printedName": "presentEventCalendarDetailModal(event:eventStore:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "EKEvent",
+              "printedName": "EventKit.EKEvent",
+              "usr": "c:objc(cs)EKEvent"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "EKEventStore",
+              "printedName": "EventKit.EKEventStore",
+              "usr": "c:objc(cs)EKEventStore"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:14add_2_calendar23SwiftAdd2CalendarPluginC012presentEventE11DetailModal5event0K5StoreySo7EKEventC_So0mL0CtF",
+          "mangledName": "$s14add_2_calendar23SwiftAdd2CalendarPluginC012presentEventE11DetailModal5event0K5StoreySo7EKEventC_So0mL0CtF",
+          "moduleName": "add_2_calendar",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SwiftAdd2CalendarPlugin",
+              "printedName": "add_2_calendar.SwiftAdd2CalendarPlugin",
+              "usr": "c:@M@add_2_calendar@objc(cs)SwiftAdd2CalendarPlugin"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@add_2_calendar@objc(cs)SwiftAdd2CalendarPlugin(im)init",
+          "mangledName": "$s14add_2_calendar23SwiftAdd2CalendarPluginCACycfc",
+          "moduleName": "add_2_calendar",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "eventEditViewController",
+          "printedName": "eventEditViewController(_:didCompleteWith:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "EKEventEditViewController",
+              "printedName": "EventKitUI.EKEventEditViewController",
+              "usr": "c:objc(cs)EKEventEditViewController"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "EKEventEditViewAction",
+              "printedName": "EventKitUI.EKEventEditViewAction",
+              "usr": "c:@E@EKEventEditViewAction"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@CM@add_2_calendar@objc(cs)SwiftAdd2CalendarPlugin(im)eventEditViewController:didCompleteWithAction:",
+          "mangledName": "$s14add_2_calendar23SwiftAdd2CalendarPluginC23eventEditViewController_15didCompleteWithySo07EKEventhiJ0C_So0nhI6ActionVtF",
+          "moduleName": "add_2_calendar",
+          "isOpen": true,
+          "objc_name": "eventEditViewController:didCompleteWithAction:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@add_2_calendar@objc(cs)SwiftAdd2CalendarPlugin",
+      "mangledName": "$s14add_2_calendar23SwiftAdd2CalendarPluginC",
+      "moduleName": "add_2_calendar",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Date",
+      "printedName": "Date",
+      "children": [
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(milliseconds:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Date",
+              "printedName": "Foundation.Date",
+              "usr": "s:10Foundation4DateV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Double",
+              "printedName": "Swift.Double",
+              "usr": "s:Sd"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:10Foundation4DateV14add_2_calendarE12millisecondsACSd_tcfc",
+          "mangledName": "$s10Foundation4DateV14add_2_calendarE12millisecondsACSd_tcfc",
+          "moduleName": "add_2_calendar",
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:10Foundation4DateV",
+      "mangledName": "$s10Foundation4DateV",
+      "moduleName": "Foundation",
+      "isExternal": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "ReferenceConvertible",
+          "printedName": "ReferenceConvertible",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "ReferenceType",
+              "printedName": "ReferenceType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NSDate",
+                  "printedName": "Foundation.NSDate",
+                  "usr": "c:objc(cs)NSDate"
+                }
+              ]
+            }
+          ],
+          "usr": "s:10Foundation20ReferenceConvertibleP",
+          "mangledName": "$s10Foundation20ReferenceConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Comparable",
+          "printedName": "Comparable",
+          "usr": "s:SL",
+          "mangledName": "$sSL"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomReflectable",
+          "printedName": "CustomReflectable",
+          "usr": "s:s17CustomReflectableP",
+          "mangledName": "$ss17CustomReflectableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_ObjectiveCBridgeable",
+          "printedName": "_ObjectiveCBridgeable",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "_ObjectiveCType",
+              "printedName": "_ObjectiveCType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NSDate",
+                  "printedName": "Foundation.NSDate",
+                  "usr": "c:objc(cs)NSDate"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s21_ObjectiveCBridgeableP",
+          "mangledName": "$ss21_ObjectiveCBridgeableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_CustomPlaygroundQuickLookable",
+          "printedName": "_CustomPlaygroundQuickLookable",
+          "usr": "s:s30_CustomPlaygroundQuickLookableP",
+          "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Decodable",
+          "printedName": "Decodable",
+          "usr": "s:Se",
+          "mangledName": "$sSe"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Encodable",
+          "printedName": "Encodable",
+          "usr": "s:SE",
+          "mangledName": "$sSE"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

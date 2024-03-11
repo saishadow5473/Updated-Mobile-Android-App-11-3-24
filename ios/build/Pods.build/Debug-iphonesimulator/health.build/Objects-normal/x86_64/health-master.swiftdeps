@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "1c27997b7139787310cae9db4b1576c3f9d3865022801087f78d87ed10855c77"
+build_start_time: [1669639499, 878265857]
+build_end_time: [1669639502, 788566112]
+inputs:
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/health-3.4.4/ios/Classes/SwiftHealthPlugin.swift": [1666074000, 579841136]

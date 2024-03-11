@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "4c924d8603ea744cf1e5ccce5e4a6ae147292e5e17a616fede14726b045f168d"
+build_start_time: [1656308591, 489994049]
+build_end_time: [1656308602, 471091032]
+inputs:
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Swift/AccessToken.swift": [1656076572, 431505680]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Swift/Imports.swift": [1656076572, 431950092]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Swift/Permission.swift": [1656076572, 431025505]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Swift/Settings.swift": [1656076572, 432416200]

@@ -1,0 +1,304 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42758cc842172da540ffb591e63e38dc1e"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd425fd5cdb9993b1816141f0c012ffa62bd"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4298fccba7a2febdedb43dddbf2e949fc3"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd429d0a1858a86fd6e6731ed20f88a1e515"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42d3f65728b12dd217475d1283ee417937"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42828dc99e68108e01848c924cebb9b2d5"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42e5199a3f70555689be7018ee7f9f878d"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42d57b8bce60a0f11113f4cff532db68d3"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42a408a4c1f668e62161cdeba76f57d50c"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42d367f2c9826e0c44989d081ca3d0f4ca"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42020791fd2e7b7ddc8fb2658339c42e16"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42b623f22c0d3d037d0450c736133d3c3e"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42566ec9a1d71c4629f4f85ecb735ce614"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd423da17a3564c774dfaa331fa07754d2bc"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd429da425bb6d6d5d8dbb95e4afffb82217"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd420be6c76e7b3dde057d7e3e6ad61f30d4"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42dd3a6a519ed4181bf31ea6bc1f18ebc5"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42d3c8dfff2c580c352f83d3850ad17775"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4218352c54edac2258b91768852065ce5e"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd429b0ee9a6d93c0cfa024bbc34a88b2122"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4232c61b747d3949a8e639c0653b6048d5"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42718890dfdac589615663a02d43d9af3e"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42b6a3fbfdb2ddab2ad6e78ffe05039617"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42b66589e559e86b96e7ab7c12d34548fe"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd425f0ec3a68eeed5241cb87afb05bcc380"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42312b4bc59bbbe2c06c205bf4da6737f5"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42f10882e1684b8a3dfdec597bc0a47af3"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42975ca575d1289bef32c9cad79a370b1b"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42a09f89f66b716da1ab2ec5e473d4f730"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42c46180aea4e87057640961e6db37df0d"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4272eabefc63c14dfe52fb0c95ad90294e"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd427a4af56e2729cecfad7b13d62a9a5fa4"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd426dbfa2df59ddcae0f992dedaee8f3553"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42355cff7d758029119bc2218cc297bc97"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd429310eae827d2a9e8ea3efc5cf46f475b"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4286480246dff0990da24465d140ad1874"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42144902882b713248a71c322fd5b2f4ee"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42d41ce0bf2141365ff0288286787936d9"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42ab7157208800be154eebc99f8fb7275d"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42279a99d692ecd2b447410bccf1f5b774"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42bf75f71a2aa7fdc38a7d7d70e6c200c1"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd427f74324bfc5c78140e34d510e26e00c1"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42a763e90526044d2c9ec7cc604e6f5ff7"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42e2ca95742fe9145d6e85576b86908ca0"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4271e33aa3d5e2d75085363f9d756ff47a"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42903a8828c5d37934c685c350618a74ae"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd425b927256c1d05efb42fd796c41f580d2"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42026e9cf767f698565069172b4ef5d4ed"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4299793a59738cc1df01fe23310734fa4b"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42c7ebed9850410f0ecfa73453f68494d7"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42397d1949c19933d656e15d632cccabfd"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42f49b18868e69e442795477541dae1d9f"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd428aa39deb40f3972946f2d929d0b6130c"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd427cb9c58d33d05677fb576674bac57313"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42132e3eab9b6cd3479f3e254e8d4ce0ce"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42839a1650b1f10605b2db52456c9e6468"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4221d372cc1e7c7587a12aeda843619e39"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42df83286ef0c813795b2a6e5600f49912"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42c283846ee6bbf6294e59b4712edf254e"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd423f812786046c7eed39878c17387833e5"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42c7508c3a173f39338f076ef697b954c4"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd421f000f066404b97b12e9c4ca84d38d0f"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42030507ac7fb8e7d67f4284cb158a0d31"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd429152bf3b88a1e7242d5cb4c469a589c6"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd420062393f91a1d2d94e3e5ed3a5aa5da9"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42445c0c37a1972f853f445373c125aa78"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd427b9702ac883adc09c8d8e7b550b12cf6"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd426f0e8be830d0d3c28782ddeefee89819"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd425a0a64caf5296aafc9510504f83bc6c6"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42de61db8d8ef7f5a6a5a778a622626318"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4268b3737835b98c013ea1e742f994ae22"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42e7cbafb63ff4e03edd5285aa56a57295"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd426024e32f5fae28e3158de595f4afebd3"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42fb3fc8a4f55010f7dccc1540beddf464"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42848ff9cf74c635f5324731538a1c853f"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42b35b2234c62e83383ef7c2509ddd49f7"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd423786431ce548989b846bbf1a7384f58e"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd427b2c943ca8f06482a1660ce33301a7a5"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42903e66fa03d6d27edaa18126a82c20fd"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd4222ec4dd39c676b6a04edc68704df6cd0"
+    },
+    {
+      "guid" : "18c1723432283e0cc55f10a6dcfd9e0288a783a885d8b0b3beb2e9f90bde3f49"
+    }
+  ],
+  "containerPath" : "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Runner.xcworkspace",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator15.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/IHL/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/IHL/Library/Developer/Xcode/DerivedData/Runner-gevzwlvbxypxrhcioybercszgkfc/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/IHL/Library/Developer/Xcode/DerivedData/Runner-gevzwlvbxypxrhcioybercszgkfc/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone14,3",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "15.2",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "TARGET_DEVICE_IDENTIFIER" : "F6CCA82A-88A5-49EB-B83A-3261954E7938",
+          "TARGET_DEVICE_MODEL" : "iPhone14,3",
+          "TARGET_DEVICE_OS_VERSION" : "15.2",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

@@ -1,0 +1,24 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "353950d2511b6d6b3be46daa6fc14182130edc7effec286e334097b967bc98e2"
+build_start_time: [1669706813, 223803043]
+build_end_time: [1669706823, 734092950]
+inputs:
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift": [1669698109, 163673162]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift"
+  : [1669698109, 165100097]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift"
+  : [1669698109, 166131019]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift"
+  : [1669698109, 166625738]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift"
+  : [1669698109, 167496681]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift": [1669698109, 164138317]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift": [1669698109, 163209915]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift"
+  : [1669698109, 167952060]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift"
+  : [1669698109, 167106151]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
+  : [1669698109, 164630889]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift"
+  : [1669698109, 165579795]

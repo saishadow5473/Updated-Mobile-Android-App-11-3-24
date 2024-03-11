@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "f0df7516d5582d19d9b6948b2bddd08989ec5c8248da0d314067b69d7562d383"
+build_start_time: [1656075404, 917247056]
+build_end_time: [1656075407, 805501937]
+inputs:
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/OrderedSet/Sources/OrderedSet.swift": [1655729440, 474951267]

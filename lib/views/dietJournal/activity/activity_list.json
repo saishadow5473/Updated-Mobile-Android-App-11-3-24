@@ -1,0 +1,518 @@
+[
+    {
+       "activity_id":"activity_13",
+       "activity_name":"Boxing ( Sparring )",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_14",
+       "activity_name":"Canoeing ( light effort )",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_17",
+       "activity_name":"Cleaning ",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_20",
+       "activity_name":"Cross - country skiing ( Slow )",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_26",
+       "activity_name":"Gardening",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_37",
+       "activity_name":"Jumping rope ( slow )",
+       "activity_met_value":"6",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_41",
+       "activity_name":"Mowing the Lawn",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_70",
+       "activity_name":"Stationary Rowing ( light effort )",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_67",
+       "activity_name":"Stationary cycling ( light effort )",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_89",
+       "activity_name":"Walking ( slow )",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_98",
+       "activity_name":"rowing ( light effort )",
+       "activity_met_value":"3",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_61",
+       "activity_name":"sleeping",
+       "activity_met_value":"1",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_66",
+       "activity_name":"standing",
+       "activity_met_value":"1",
+       "activity_type":"L"
+    },
+    {
+       "activity_id":"activity_02",
+       "activity_name":"Aerobic dancing ( low impact )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_05",
+       "activity_name":"Backpacking",
+       "activity_met_value":"10",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_06",
+       "activity_name":"Baseball",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_08",
+       "activity_name":"Beach Volleyball",
+       "activity_met_value":"8",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_09",
+       "activity_name":"Bodyweight Exercise (Moderate effort )",
+       "activity_met_value":"8",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_11",
+       "activity_name":"Bowling",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_12",
+       "activity_name":"Boxing ( Punching bag )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_15",
+       "activity_name":"Canoeing ( Moderate effect ) ",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_19",
+       "activity_name":"Cross -country skiing ( Moderate )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_22",
+       "activity_name":"Cycling  ( Moderate )",
+       "activity_met_value":"8",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_27",
+       "activity_name":"Golf",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_33",
+       "activity_name":"Ice skating ( slow )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_36",
+       "activity_name":"Jumping rope ( Moderate)",
+       "activity_met_value":"8",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_38",
+       "activity_name":"Kayaking ",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_04",
+       "activity_name":"Mountain Biking",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_45",
+       "activity_name":"Raking leaves",
+       "activity_met_value":"4",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_50",
+       "activity_name":"Running ( 11 min per mile )",
+       "activity_met_value":"5",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_51",
+       "activity_name":"Running ( 12 min per mile )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_52",
+       "activity_name":"Running ( 6 min per mile)",
+       "activity_met_value":"11",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_49",
+       "activity_name":"Running (10 min per mile)",
+       "activity_met_value":"4",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_56",
+       "activity_name":"Sailing",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_68",
+       "activity_name":"Stationary cycling ( Moderate effort )",
+       "activity_met_value":"5",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_71",
+       "activity_name":"Stationary rowing ( Moderate effort )",
+       "activity_met_value":"4",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_73",
+       "activity_name":"Stretching",
+       "activity_met_value":"4",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_79",
+       "activity_name":"Swimming ( freestyle , moderate effort )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_80",
+       "activity_name":"Table tennis",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_83",
+       "activity_name":"Treading water ( Moderate water )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_85",
+       "activity_name":"Ultimate frisbee",
+       "activity_met_value":"5",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_88",
+       "activity_name":"Walking ( Moderate )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_96",
+       "activity_name":"Yoga",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_99",
+       "activity_name":"rowing ( Moderate effect )",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_97",
+       "activity_name":"softball",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_101",
+       "activity_name":"white water rafting",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_102",
+       "activity_name":"windsurfing",
+       "activity_met_value":"6",
+       "activity_type":"M"
+    },
+    {
+       "activity_id":"activity_10",
+       "activity_name":"Bodyweight Exercise ( Vigorous effort )",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_01",
+       "activity_name":"Aerobic Dancing ( high Impact )",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_03",
+       "activity_name":"Aqua jogging",
+       "activity_met_value":"8",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_07",
+       "activity_name":"Basketball",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_16",
+       "activity_name":"Canoeing ( Vigorous effect )",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_18",
+       "activity_name":"Cross -country skiing ( Fast )",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_21",
+       "activity_name":"Cycling ( fast )",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_24",
+       "activity_name":"Field Hockey",
+       "activity_met_value":"8",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_25",
+       "activity_name":"Football",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_28",
+       "activity_name":"Gymnastics",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_29",
+       "activity_name":"Hiking",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_30",
+       "activity_name":"Horseback riding",
+       "activity_met_value":"11",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_31",
+       "activity_name":"Ice Hockey",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_32",
+       "activity_name":"Ice skating ( Fast )",
+       "activity_met_value":"11",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_34",
+       "activity_name":"Incline skating ",
+       "activity_met_value":"7",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_35",
+       "activity_name":"Jumping rope ( Fast )",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_39",
+       "activity_name":"Lacrosse",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_40",
+       "activity_name":"Martial arts ( Jiu-jitsu , judo , karate , kickboxing , taekwondo )",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_42",
+       "activity_name":"Pilates",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_43",
+       "activity_name":"Race walking",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_44",
+       "activity_name":"Racquetball",
+       "activity_met_value":"7",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_46",
+       "activity_name":"Rock climbing",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_47",
+       "activity_name":"Roller Skating",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_48",
+       "activity_name":"Rugby",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_54",
+       "activity_name":"Running ( 8 min per mile )",
+       "activity_met_value":"8",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_55",
+       "activity_name":"Running ( 9 min per mile )",
+       "activity_met_value":"7",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_53",
+       "activity_name":"Running (7 min per mile )",
+       "activity_met_value":"10",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_69",
+       "activity_name":"Stationary cycling ( Vigorous effort )",
+       "activity_met_value":"7",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_72",
+       "activity_name":"Stationary rowing ( Vigorous effort )",
+       "activity_met_value":"7",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_74",
+       "activity_name":"Surfing ( Body or Board )",
+       "activity_met_value":"7",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_75",
+       "activity_name":"Swimming ( Backstroke )",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_77",
+       "activity_name":"Swimming ( Butterfly )",
+       "activity_met_value":"8",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_78",
+       "activity_name":"Swimming ( freestyle , fast effort )",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_76",
+       "activity_name":"Swimming ( breast stroke )",
+       "activity_met_value":"8",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_82",
+       "activity_name":"Tennis ( SINGLE)",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_84",
+       "activity_name":"Treading water ( Vigorous effort )",
+       "activity_met_value":"8",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_87",
+       "activity_name":"Walking ( Brisk )",
+       "activity_met_value":"7",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_90",
+       "activity_name":"Walking ( Very brisk )",
+       "activity_met_value":"8",
+       "activity_type":"V"
+    },
+    {
+       "activity_id":"activity_100",
+       "activity_name":"rowing ( Vigorous effect )",
+       "activity_met_value":"9",
+       "activity_type":"V"
+    }
+ ]

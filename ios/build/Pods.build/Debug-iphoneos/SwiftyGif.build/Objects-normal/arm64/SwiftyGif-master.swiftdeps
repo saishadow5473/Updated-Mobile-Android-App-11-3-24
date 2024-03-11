@@ -1,0 +1,11 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "8760ac039bef09206ae687b4040d7c13f7f7adc930522fe6c272b2dbcad05013"
+build_start_time: [1670079634, 515483856]
+build_end_time: [1670079637, 538339138]
+inputs:
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/SwiftyGif/SwiftyGif/NSImage+SwiftyGif.swift": [1669698112, 226183176]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/SwiftyGif/SwiftyGif/NSImageView+SwiftyGif.swift": [1669698112, 229476213]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/SwiftyGif/SwiftyGif/ObjcAssociatedWeakObject.swift": [1669698112, 226668834]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/SwiftyGif/SwiftyGif/SwiftyGifManager.swift": [1669698112, 228676795]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/SwiftyGif/SwiftyGif/UIImage+SwiftyGif.swift": [1669698112, 227405548]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/SwiftyGif/SwiftyGif/UIImageView+SwiftyGif.swift": [1669698112, 225614547]

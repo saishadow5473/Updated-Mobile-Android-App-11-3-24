@@ -1,0 +1,147 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "b40ab62337af7dcf810c70cbf1b82e8182da9205d7c08dcf3cfd4b45c6b0ebb2"
+build_start_time: [1656075408, 30163049]
+build_end_time: [1656075416, 150331020]
+inputs:
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/ContextMenuOptions.swift": !private [1590835970, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/CredentialDatabase.swift": !private [1613508006, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/CustomeSchemeHandler.swift"
+  : !private [1613766498, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/FlutterMethodCallDelegate.swift"
+  : !private [1614809134, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebView.swift"
+  : !private [1616771116, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebViewManager.swift"
+  : !private [1616770815, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/HttpAuthenticationChallenge.swift"
+  : !private [1613508078, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppBrowser/InAppBrowserDelegate.swift"
+  : !private [1613335176, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppBrowser/InAppBrowserManager.swift"
+  : !private [1614951837, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppBrowser/InAppBrowserNavigationController.swift"
+  : !private [1613335194, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppBrowser/InAppBrowserOptions.swift"
+  : !private [1613328040, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppBrowser/InAppBrowserWebViewController.swift"
+  : !private [1617363647, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppWebView/FlutterWebViewController.swift"
+  : !private [1617363496, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppWebView/FlutterWebViewFactory.swift"
+  : !private [1616770783, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppWebView/InAppWebView.swift"
+  : !private [1617811387, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppWebView/InAppWebViewOptions.swift"
+  : !private [1614185227, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppWebViewMethodHandler.swift"
+  : !private [1617363437, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/InAppWebViewStatic.swift": !private [1612375472, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/LeakAvoider.swift": !private [1614791464, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/MyCookieManager.swift": !private [1612124788, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/MyWebStorageManager.swift"
+  : !private [1588992003, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Options.swift": !private [1614903931, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PlatformUtil.swift": !private [1614558339, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/CallAsyncJavaScriptBelowIOS14WrapperJS.swift"
+  : !private [1613949571, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/ConsoleLogJS.swift"
+  : !private [1617359913, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/EnableViewportScaleJS.swift"
+  : !private [1613647745, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/FindElementsAtPointJS.swift"
+  : !private [1613647768, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/FindTextHighlightJS.swift"
+  : !private [1613838896, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/InterceptAjaxRequestJS.swift"
+  : !private [1616067427, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/InterceptFetchRequestJS.swift"
+  : !private [1616073907, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/JavaScriptBridgeJS.swift"
+  : !private [1616078098, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/LastTouchedAnchorOrImageJS.swift"
+  : !private [1613647939, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/OnLoadResourceJS.swift"
+  : !private [1613647968, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/OnWindowBlurEventJS.swift"
+  : !private [1613647997, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/OnWindowFocusEventJS.swift"
+  : !private [1613648034, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/OriginalViewPortMetaTagContentJS.swift"
+  : !private [1613648064, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/PluginScriptsUtil.swift"
+  : !private [1613607123, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/PrintJS.swift"
+  : !private [1613648094, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/PromisePolyfillJS.swift"
+  : !private [1613648156, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/SupportZoomJS.swift"
+  : !private [1613648171, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/WebMessageChannelJS.swift"
+  : !private [1615387625, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/WebMessageListenerJS.swift"
+  : !private [1615634646, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PluginScriptsJS/WindowIdJS.swift"
+  : !private [1613677853, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PullToRefresh/PullToRefreshControl.swift"
+  : !private [1614949669, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PullToRefresh/PullToRefreshDelegate.swift"
+  : !private [1614888326, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/PullToRefresh/PullToRefreshOptions.swift"
+  : !private [1614949678, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/SafariViewController/ChromeSafariBrowserManager.swift"
+  : !private [1614610797, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/SafariViewController/SafariBrowserOptions.swift"
+  : !private [1613343894, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/SafariViewController/SafariViewController.swift"
+  : !private [1614809171, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/SwiftFlutterPlugin.swift": !private [1614555784, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/ClientCertChallenge.swift"
+  : !private [1613508097, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/HitTestResult.swift"
+  : !private [1613508042, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/NSAttributedString.swift"
+  : !private [1614902361, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/PluginScript.swift": !private [1613697955, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/SecCertificate.swift"
+  : !private [1613767486, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/ServerTrustChallenge.swift"
+  : !private [1613508087, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/Size2D.swift": !private [1616771114, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/SslCertificate.swift"
+  : !private [1613508055, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/SslError.swift": !private [1613835790, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/UIColor.swift": !private [1613767386, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/URLAuthenticationChallenge.swift"
+  : !private [1613767408, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/URLCredential.swift"
+  : !private [1613767424, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/URLProtectionSpace.swift"
+  : !private [1613769016, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/URLRequest.swift": !private [1613767640, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/URLResponse.swift": !private [1614334411, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/UserScript.swift": !private [1613697791, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WKContentWorld.swift"
+  : !private [1613767357, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WKFrameInfo.swift": !private [1613767578, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WKNavigationAction.swift"
+  : !private [1613767559, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WKNavigationResponse.swift"
+  : !private [1614334052, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WKSecurityOrigin.swift"
+  : !private [1613767597, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WKUserContentController.swift"
+  : !private [1614032020, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WKWindowFeatures.swift"
+  : !private [1613767507, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WebMessage.swift": !private [1615381582, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WebMessageChannel.swift"
+  : !private [1616768184, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WebMessageListener.swift"
+  : !private [1616497526, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WebMessagePort.swift"
+  : !private [1615461586, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Types/WebViewTransport.swift"
+  : !private [1613485014, 0]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/Util.swift": !private [1615457475, 0]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.3.2/ios/Classes/WKProcessPoolManager.swift"
+  : !private [1588992003, 0]

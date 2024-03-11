@@ -1,0 +1,131 @@
+{
+  "project_info": {
+    "project_number": "1068591848947",
+    "firebase_url": "https://indiahealthlinkapp.firebaseio.com",
+    "project_id": "indiahealthlinkapp",
+    "storage_bucket": "indiahealthlinkapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068591848947:android:4f1137c7fa84169d048686",
+        "android_client_info": {
+          "package_name": "com.indiahealthlink.ihlhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068591848947-2eebuchl600g0h1a6lmucfibh92pkpuf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiahealthlink.ihlhealth",
+            "certificate_hash": "e56a5170bff774713da706a7f52ef8b7aeb0275d"
+          }
+        },
+        {
+          "client_id": "1068591848947-7tdqadds56uclghefqmln65ua0a9de78.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiahealthlink.ihlhealth",
+            "certificate_hash": "46c7f5439fe7931095aef7aacd10ba96a5053940"
+          }
+        },
+        {
+          "client_id": "1068591848947-bph4a4ibg37dam3tsrdi3llnbcjj94j9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiahealthlink.ihlhealth",
+            "certificate_hash": "9ac6ba640e9cbfe8d8e3da26cc089ce0fb5844c7"
+          }
+        },
+        {
+          "client_id": "1068591848947-ekuu6l6mqr8macc84lm7gb2a816phcn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiahealthlink.ihlhealth",
+            "certificate_hash": "ef15be86f395fbe2f2c2c8bb2a693996d96eb8f0"
+          }
+        },
+        {
+          "client_id": "1068591848947-nfnhtt5kdeq2nk83o6volljb6mkl647h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiahealthlink.ihlhealth",
+            "certificate_hash": "e127eb3526c83460b6c3f8457a0a58e5ccea3481"
+          }
+        },
+        {
+          "client_id": "1068591848947-q04emqu95cgqltgeqpmnq3mc7btvl4li.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiahealthlink.ihlhealth",
+            "certificate_hash": "738a509c129d427fe126787789c7b102b8e2dfe5"
+          }
+        },
+        {
+          "client_id": "1068591848947-dfmues44s14vfku68mdkd818sa5fnnpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDywpqHSTvZnQj6LoqLv_cKCR3-UAXQaUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068591848947-dfmues44s14vfku68mdkd818sa5fnnpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1068591848947-83qsu0smjgrl0o56br22ouhgskdi31v4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.indiahealthlink.ihlCare"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068591848947:android:21160663ca429384048686",
+        "android_client_info": {
+          "package_name": "com.indiahealthlink.ihlpartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068591848947-dfmues44s14vfku68mdkd818sa5fnnpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDywpqHSTvZnQj6LoqLv_cKCR3-UAXQaUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068591848947-dfmues44s14vfku68mdkd818sa5fnnpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1068591848947-83qsu0smjgrl0o56br22ouhgskdi31v4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.indiahealthlink.ihlCare"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

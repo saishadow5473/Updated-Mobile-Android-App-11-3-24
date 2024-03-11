@@ -1,0 +1,1210 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "Razorpay",
+      "printedName": "Razorpay",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "razorpay_flutter",
+      "printedName": "razorpay_flutter",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "RazorpayDelegate",
+      "printedName": "RazorpayDelegate",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "CODE_PAYMENT_SUCCESS",
+          "printedName": "CODE_PAYMENT_SUCCESS",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC20CODE_PAYMENT_SUCCESSSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC20CODE_PAYMENT_SUCCESSSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC20CODE_PAYMENT_SUCCESSSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC20CODE_PAYMENT_SUCCESSSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "CODE_PAYMENT_ERROR",
+          "printedName": "CODE_PAYMENT_ERROR",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC18CODE_PAYMENT_ERRORSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC18CODE_PAYMENT_ERRORSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC18CODE_PAYMENT_ERRORSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC18CODE_PAYMENT_ERRORSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "CODE_PAYMENT_EXTERNAL_WALLET",
+          "printedName": "CODE_PAYMENT_EXTERNAL_WALLET",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC28CODE_PAYMENT_EXTERNAL_WALLETSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC28CODE_PAYMENT_EXTERNAL_WALLETSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC28CODE_PAYMENT_EXTERNAL_WALLETSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC28CODE_PAYMENT_EXTERNAL_WALLETSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "NETWORK_ERROR",
+          "printedName": "NETWORK_ERROR",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC13NETWORK_ERRORSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC13NETWORK_ERRORSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC13NETWORK_ERRORSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC13NETWORK_ERRORSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "INVALID_OPTIONS",
+          "printedName": "INVALID_OPTIONS",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC15INVALID_OPTIONSSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC15INVALID_OPTIONSSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC15INVALID_OPTIONSSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC15INVALID_OPTIONSSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "PAYMENT_CANCELLED",
+          "printedName": "PAYMENT_CANCELLED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC17PAYMENT_CANCELLEDSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC17PAYMENT_CANCELLEDSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC17PAYMENT_CANCELLEDSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC17PAYMENT_CANCELLEDSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "TLS_ERROR",
+          "printedName": "TLS_ERROR",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC9TLS_ERRORSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC9TLS_ERRORSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC9TLS_ERRORSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC9TLS_ERRORSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "INCOMPATIBLE_PLUGIN",
+          "printedName": "INCOMPATIBLE_PLUGIN",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC19INCOMPATIBLE_PLUGINSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC19INCOMPATIBLE_PLUGINSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC19INCOMPATIBLE_PLUGINSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC19INCOMPATIBLE_PLUGINSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "UNKNOWN_ERROR",
+          "printedName": "UNKNOWN_ERROR",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC13UNKNOWN_ERRORSivpZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC13UNKNOWN_ERRORSivpZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:16razorpay_flutter16RazorpayDelegateC13UNKNOWN_ERRORSivgZ",
+              "mangledName": "$s16razorpay_flutter16RazorpayDelegateC13UNKNOWN_ERRORSivgZ",
+              "moduleName": "razorpay_flutter",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "onExternalWalletSelected",
+          "printedName": "onExternalWalletSelected(_:withPaymentData:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.AnyHashable : Any]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.AnyHashable : Any]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AnyHashable",
+                      "printedName": "Swift.AnyHashable",
+                      "usr": "s:s11AnyHashableV"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@razorpay_flutter@objc(cs)RazorpayDelegate(im)onExternalWalletSelected:withPaymentData:",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC24onExternalWalletSelected_15withPaymentDataySS_SDys11AnyHashableVypGSgtF",
+          "moduleName": "razorpay_flutter",
+          "isOpen": true,
+          "objc_name": "onExternalWalletSelected:withPaymentData:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "pendingResult",
+          "printedName": "pendingResult",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ImplicitlyUnwrappedOptional",
+              "printedName": "((Any?) -> ())?",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(Any?) -> ()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Optional",
+                      "printedName": "Any?",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ProtocolComposition",
+                          "printedName": "Any"
+                        }
+                      ],
+                      "usr": "s:Sq"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC13pendingResult33_D398B1622358CAD4A1EE2D65450D3308LLyypSgcSgvp",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC13pendingResult33_D398B1622358CAD4A1EE2D65450D3308LLyypSgcSgvp",
+          "moduleName": "razorpay_flutter",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "onPaymentError",
+          "printedName": "onPaymentError(_:description:andData:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int32",
+              "printedName": "Swift.Int32",
+              "usr": "s:s5Int32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.AnyHashable : Any]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.AnyHashable : Any]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AnyHashable",
+                      "printedName": "Swift.AnyHashable",
+                      "usr": "s:s11AnyHashableV"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@razorpay_flutter@objc(cs)RazorpayDelegate(im)onPaymentError:description:andData:",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC14onPaymentError_11description7andDatays5Int32V_SSSDys11AnyHashableVypGSgtF",
+          "moduleName": "razorpay_flutter",
+          "isOpen": true,
+          "objc_name": "onPaymentError:description:andData:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "onPaymentSuccess",
+          "printedName": "onPaymentSuccess(_:andData:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.AnyHashable : Any]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.AnyHashable : Any]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AnyHashable",
+                      "printedName": "Swift.AnyHashable",
+                      "usr": "s:s11AnyHashableV"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@razorpay_flutter@objc(cs)RazorpayDelegate(im)onPaymentSuccess:andData:",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC16onPaymentSuccess_7andDataySS_SDys11AnyHashableVypGSgtF",
+          "moduleName": "razorpay_flutter",
+          "isOpen": true,
+          "objc_name": "onPaymentSuccess:andData:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "open",
+          "printedName": "open(options:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Any]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ProtocolComposition",
+                  "printedName": "Any"
+                }
+              ],
+              "usr": "s:SD"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC4open7options6resultySDySSypG_yypSgctF",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC4open7options6resultySDySSypG_yypSgctF",
+          "moduleName": "razorpay_flutter",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "resync",
+          "printedName": "resync(result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC6resync6resultyyypSgc_tF",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC6resync6resultyyypSgc_tF",
+          "moduleName": "razorpay_flutter",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "translateRzpPaymentError",
+          "printedName": "translateRzpPaymentError(errorCode:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:16razorpay_flutter16RazorpayDelegateC24translateRzpPaymentError9errorCodeS2i_tFZ",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateC24translateRzpPaymentError9errorCodeS2i_tFZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "declAttributes": [
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "RazorpayDelegate",
+              "printedName": "razorpay_flutter.RazorpayDelegate",
+              "usr": "c:@M@razorpay_flutter@objc(cs)RazorpayDelegate"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@razorpay_flutter@objc(cs)RazorpayDelegate(im)init",
+          "mangledName": "$s16razorpay_flutter16RazorpayDelegateCACycfc",
+          "moduleName": "razorpay_flutter",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@razorpay_flutter@objc(cs)RazorpayDelegate",
+      "mangledName": "$s16razorpay_flutter16RazorpayDelegateC",
+      "moduleName": "razorpay_flutter",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "RazorpayPaymentCompletionProtocolWithData",
+          "printedName": "RazorpayPaymentCompletionProtocolWithData",
+          "usr": "c:@M@Razorpay@objc(pl)RazorpayPaymentCompletionProtocolWithData",
+          "mangledName": "$s8Razorpay0A33PaymentCompletionProtocolWithDataP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "ExternalWalletSelectionProtocol",
+          "printedName": "ExternalWalletSelectionProtocol",
+          "usr": "c:@M@Razorpay@objc(pl)ExternalWalletSelectionProtocol",
+          "mangledName": "$s8Razorpay31ExternalWalletSelectionProtocolP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "RazorpayProtocol",
+          "printedName": "RazorpayProtocol",
+          "usr": "c:@M@Razorpay@objc(pl)RazorpayProtocol",
+          "mangledName": "$s8Razorpay0A8ProtocolP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "Razorpay",
+      "printedName": "Razorpay",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter"
+    },
+    {
+      "kind": "Import",
+      "name": "razorpay_flutter",
+      "printedName": "razorpay_flutter",
+      "declKind": "Import",
+      "moduleName": "razorpay_flutter",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SwiftRazorpayFlutterPlugin",
+      "printedName": "SwiftRazorpayFlutterPlugin",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "razorpayDelegate",
+          "printedName": "razorpayDelegate",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "RazorpayDelegate",
+              "printedName": "razorpay_flutter.RazorpayDelegate",
+              "usr": "c:@M@razorpay_flutter@objc(cs)RazorpayDelegate"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:16razorpay_flutter26SwiftRazorpayFlutterPluginC0A8Delegate33_CD71700BE6EAE0B541DE23304B7ABCADLLAA0dG0Cvp",
+          "mangledName": "$s16razorpay_flutter26SwiftRazorpayFlutterPluginC0A8Delegate33_CD71700BE6EAE0B541DE23304B7ABCADLLAA0dG0Cvp",
+          "moduleName": "razorpay_flutter",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "register",
+          "printedName": "register(with:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterPluginRegistrar",
+              "printedName": "Flutter.FlutterPluginRegistrar",
+              "usr": "c:objc(pl)FlutterPluginRegistrar"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@razorpay_flutter@objc(cs)SwiftRazorpayFlutterPlugin(cm)registerWithRegistrar:",
+          "mangledName": "$s16razorpay_flutter26SwiftRazorpayFlutterPluginC8register4withySo0eF9Registrar_p_tFZ",
+          "moduleName": "razorpay_flutter",
+          "static": true,
+          "objc_name": "registerWithRegistrar:",
+          "declAttributes": [
+            "Final",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "handle",
+          "printedName": "handle(_:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@razorpay_flutter@objc(cs)SwiftRazorpayFlutterPlugin(im)handleMethodCall:result:",
+          "mangledName": "$s16razorpay_flutter26SwiftRazorpayFlutterPluginC6handle_6resultySo0E10MethodCallC_yypSgctF",
+          "moduleName": "razorpay_flutter",
+          "isOpen": true,
+          "objc_name": "handleMethodCall:result:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SwiftRazorpayFlutterPlugin",
+              "printedName": "razorpay_flutter.SwiftRazorpayFlutterPlugin",
+              "usr": "c:@M@razorpay_flutter@objc(cs)SwiftRazorpayFlutterPlugin"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@razorpay_flutter@objc(cs)SwiftRazorpayFlutterPlugin(im)init",
+          "mangledName": "$s16razorpay_flutter26SwiftRazorpayFlutterPluginCACycfc",
+          "moduleName": "razorpay_flutter",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@razorpay_flutter@objc(cs)SwiftRazorpayFlutterPlugin",
+      "mangledName": "$s16razorpay_flutter26SwiftRazorpayFlutterPluginC",
+      "moduleName": "razorpay_flutter",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

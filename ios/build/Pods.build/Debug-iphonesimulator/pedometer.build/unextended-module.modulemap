@@ -1,0 +1,10 @@
+framework module pedometer {
+  umbrella header "pedometer-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module pedometer.__Swift {
+    exclude header "pedometer-Swift.h"
+}

@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/IHL/IHL/IHLCARE/IHLCareNew/build/ios/Debug-iphonesimulator/facebook_app_events/facebook_app_events.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Debug-iphonesimulator/facebook_app_events.build/unextended-module.modulemap",
+    }]
+  }]
+}

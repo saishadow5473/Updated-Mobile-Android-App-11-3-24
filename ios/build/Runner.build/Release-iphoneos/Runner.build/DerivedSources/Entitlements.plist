@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>LL825PWTKP.com.indiahealthlink.ihlhealth</string>
+	<key>aps-environment</key>
+	<string>development</string>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:ihlhealth.page.link</string>
+		<string>applinks:ihl.page.link</string>
+		<string>applinks:indiahealthlink.page.link</string>
+	</array>
+	<key>com.apple.developer.healthkit</key>
+	<true/>
+	<key>com.apple.developer.healthkit.access</key>
+	<array>
+		<string>health-records</string>
+	</array>
+	<key>com.apple.developer.healthkit.background-delivery</key>
+	<true/>
+	<key>com.apple.developer.team-identifier</key>
+	<string>LL825PWTKP</string>
+	<key>get-task-allow</key>
+	<true/>
+</dict>
+</plist>

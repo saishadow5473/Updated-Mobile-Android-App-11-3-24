@@ -1,0 +1,10 @@
+framework module flutter_document_picker {
+  umbrella header "flutter_document_picker-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module flutter_document_picker.__Swift {
+    exclude header "flutter_document_picker-Swift.h"
+}

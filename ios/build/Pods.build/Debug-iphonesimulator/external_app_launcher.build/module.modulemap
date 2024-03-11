@@ -1,0 +1,6 @@
+framework module external_app_launcher {
+  umbrella header "external_app_launcher-umbrella.h"
+
+  export *
+  module * { export * }
+}

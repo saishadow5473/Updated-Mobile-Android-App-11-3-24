@@ -1,0 +1,1118 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "flutter_document_picker",
+      "printedName": "flutter_document_picker",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SwiftFlutterDocumentPickerDelegate",
+      "printedName": "SwiftFlutterDocumentPickerDelegate",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "flutterResult",
+          "printedName": "flutterResult",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "((Any?) -> ())?",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(Any?) -> ()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Optional",
+                      "printedName": "Any?",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ProtocolComposition",
+                          "printedName": "Any"
+                        }
+                      ],
+                      "usr": "s:Sq"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC0A6Result33_DC953E4AEECFED4114F1F5C24294AD7FLLyypSgcSgvp",
+          "mangledName": "$s23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC0A6Result33_DC953E4AEECFED4114F1F5C24294AD7FLLyypSgcSgvp",
+          "moduleName": "flutter_document_picker",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "params",
+          "printedName": "params",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "flutter_document_picker.FlutterDocumentPickerParams?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "FlutterDocumentPickerParams",
+                  "printedName": "flutter_document_picker.FlutterDocumentPickerParams",
+                  "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC6params33_DC953E4AEECFED4114F1F5C24294AD7FLLAA0efG6ParamsVSgvp",
+          "mangledName": "$s23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC6params33_DC953E4AEECFED4114F1F5C24294AD7FLLAA0efG6ParamsVSgvp",
+          "moduleName": "flutter_document_picker",
+          "isInternal": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true
+        },
+        {
+          "kind": "Function",
+          "name": "pickDocument",
+          "printedName": "pickDocument(_:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "flutter_document_picker.FlutterDocumentPickerParams?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "FlutterDocumentPickerParams",
+                  "printedName": "flutter_document_picker.FlutterDocumentPickerParams",
+                  "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC04pickF0_6resultyAA0efG6ParamsVSg_yypSgctF",
+          "mangledName": "$s23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC04pickF0_6resultyAA0efG6ParamsVSg_yypSgctF",
+          "moduleName": "flutter_document_picker",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SwiftFlutterDocumentPickerDelegate",
+              "printedName": "flutter_document_picker.SwiftFlutterDocumentPickerDelegate",
+              "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerDelegate"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerDelegate(im)init",
+          "mangledName": "$s23flutter_document_picker34SwiftFlutterDocumentPickerDelegateCACycfc",
+          "moduleName": "flutter_document_picker",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "documentPicker",
+          "printedName": "documentPicker(_:didPickDocumentAt:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UIDocumentPickerViewController",
+              "printedName": "UIKit.UIDocumentPickerViewController",
+              "usr": "c:objc(cs)UIDocumentPickerViewController"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "URL",
+              "printedName": "Foundation.URL",
+              "usr": "s:10Foundation3URLV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@CM@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerDelegate(im)documentPicker:didPickDocumentAtURL:",
+          "mangledName": "$s23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC0bG0_07didPickF2AtySo010UIDocumentG14ViewControllerC_10Foundation3URLVtF",
+          "moduleName": "flutter_document_picker",
+          "isOpen": true,
+          "objc_name": "documentPicker:didPickDocumentAtURL:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "documentPickerWasCancelled",
+          "printedName": "documentPickerWasCancelled(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UIDocumentPickerViewController",
+              "printedName": "UIKit.UIDocumentPickerViewController",
+              "usr": "c:objc(cs)UIDocumentPickerViewController"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@CM@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerDelegate(im)documentPickerWasCancelled:",
+          "mangledName": "$s23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC0bG12WasCancelledyySo010UIDocumentG14ViewControllerCF",
+          "moduleName": "flutter_document_picker",
+          "isOpen": true,
+          "objc_name": "documentPickerWasCancelled:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerDelegate",
+      "mangledName": "$s23flutter_document_picker34SwiftFlutterDocumentPickerDelegateC",
+      "moduleName": "flutter_document_picker",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker"
+    },
+    {
+      "kind": "Import",
+      "name": "flutter_document_picker",
+      "printedName": "flutter_document_picker",
+      "declKind": "Import",
+      "moduleName": "flutter_document_picker",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SwiftFlutterDocumentPickerPlugin",
+      "printedName": "SwiftFlutterDocumentPickerPlugin",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "register",
+          "printedName": "register(with:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterPluginRegistrar",
+              "printedName": "Flutter.FlutterPluginRegistrar",
+              "usr": "c:objc(pl)FlutterPluginRegistrar"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerPlugin(cm)registerWithRegistrar:",
+          "mangledName": "$s23flutter_document_picker32SwiftFlutterDocumentPickerPluginC8register4withySo0eH9Registrar_p_tFZ",
+          "moduleName": "flutter_document_picker",
+          "static": true,
+          "objc_name": "registerWithRegistrar:",
+          "declAttributes": [
+            "Final",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "delegate",
+          "printedName": "delegate",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SwiftFlutterDocumentPickerDelegate",
+              "printedName": "flutter_document_picker.SwiftFlutterDocumentPickerDelegate",
+              "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerDelegate"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker32SwiftFlutterDocumentPickerPluginC8delegateAA0defG8DelegateCvp",
+          "mangledName": "$s23flutter_document_picker32SwiftFlutterDocumentPickerPluginC8delegateAA0defG8DelegateCvp",
+          "moduleName": "flutter_document_picker",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "SwiftFlutterDocumentPickerDelegate",
+                  "printedName": "flutter_document_picker.SwiftFlutterDocumentPickerDelegate",
+                  "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerDelegate"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:23flutter_document_picker32SwiftFlutterDocumentPickerPluginC8delegateAA0defG8DelegateCvg",
+              "mangledName": "$s23flutter_document_picker32SwiftFlutterDocumentPickerPluginC8delegateAA0defG8DelegateCvg",
+              "moduleName": "flutter_document_picker",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "handle",
+          "printedName": "handle(_:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerPlugin(im)handleMethodCall:result:",
+          "mangledName": "$s23flutter_document_picker32SwiftFlutterDocumentPickerPluginC6handle_6resultySo0E10MethodCallC_yypSgctF",
+          "moduleName": "flutter_document_picker",
+          "isOpen": true,
+          "objc_name": "handleMethodCall:result:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SwiftFlutterDocumentPickerPlugin",
+              "printedName": "flutter_document_picker.SwiftFlutterDocumentPickerPlugin",
+              "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerPlugin"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerPlugin(im)init",
+          "mangledName": "$s23flutter_document_picker32SwiftFlutterDocumentPickerPluginCACycfc",
+          "moduleName": "flutter_document_picker",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@flutter_document_picker@objc(cs)SwiftFlutterDocumentPickerPlugin",
+      "mangledName": "$s23flutter_document_picker32SwiftFlutterDocumentPickerPluginC",
+      "moduleName": "flutter_document_picker",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "FlutterDocumentPickerParams",
+      "printedName": "FlutterDocumentPickerParams",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "ALLOWED_UTI_TYPES",
+          "printedName": "ALLOWED_UTI_TYPES",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV17ALLOWED_UTI_TYPESSSvpZ",
+          "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV17ALLOWED_UTI_TYPESSSvpZ",
+          "moduleName": "flutter_document_picker",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV17ALLOWED_UTI_TYPESSSvgZ",
+              "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV17ALLOWED_UTI_TYPESSSvgZ",
+              "moduleName": "flutter_document_picker",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "ALLOWED_FILE_EXTENSIONS",
+          "printedName": "ALLOWED_FILE_EXTENSIONS",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV23ALLOWED_FILE_EXTENSIONSSSvpZ",
+          "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV23ALLOWED_FILE_EXTENSIONSSSvpZ",
+          "moduleName": "flutter_document_picker",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV23ALLOWED_FILE_EXTENSIONSSSvgZ",
+              "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV23ALLOWED_FILE_EXTENSIONSSSvgZ",
+              "moduleName": "flutter_document_picker",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "INVALID_FILENAME_SYMBOLS",
+          "printedName": "INVALID_FILENAME_SYMBOLS",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV24INVALID_FILENAME_SYMBOLSSSvpZ",
+          "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV24INVALID_FILENAME_SYMBOLSSSvpZ",
+          "moduleName": "flutter_document_picker",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV24INVALID_FILENAME_SYMBOLSSSvgZ",
+              "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV24INVALID_FILENAME_SYMBOLSSSvgZ",
+              "moduleName": "flutter_document_picker",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "allowedUtiTypes",
+          "printedName": "allowedUtiTypes",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV15allowedUtiTypesSaySSGSgvp",
+          "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV15allowedUtiTypesSaySSGSgvp",
+          "moduleName": "flutter_document_picker",
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[Swift.String]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV15allowedUtiTypesSaySSGSgvg",
+              "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV15allowedUtiTypesSaySSGSgvg",
+              "moduleName": "flutter_document_picker",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "allowedFileExtensions",
+          "printedName": "allowedFileExtensions",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV21allowedFileExtensionsSaySSGSgvp",
+          "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV21allowedFileExtensionsSaySSGSgvp",
+          "moduleName": "flutter_document_picker",
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[Swift.String]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV21allowedFileExtensionsSaySSGSgvg",
+              "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV21allowedFileExtensionsSaySSGSgvg",
+              "moduleName": "flutter_document_picker",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "invalidFileNameSymbols",
+          "printedName": "invalidFileNameSymbols",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV22invalidFileNameSymbolsSaySSGSgvp",
+          "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV22invalidFileNameSymbolsSaySSGSgvp",
+          "moduleName": "flutter_document_picker",
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 2,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[Swift.String]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV22invalidFileNameSymbolsSaySSGSgvg",
+              "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV22invalidFileNameSymbolsSaySSGSgvg",
+              "moduleName": "flutter_document_picker",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(allowedUtiTypes:allowedFileExtensions:invalidFileNameSymbols:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterDocumentPickerParams",
+              "printedName": "flutter_document_picker.FlutterDocumentPickerParams",
+              "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV15allowedUtiTypes0H14FileExtensions07invalidK11NameSymbolsACSaySSGSg_A2Htcfc",
+          "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV15allowedUtiTypes0H14FileExtensions07invalidK11NameSymbolsACSaySSGSg_A2Htcfc",
+          "moduleName": "flutter_document_picker",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:23flutter_document_picker27FlutterDocumentPickerParamsV",
+      "mangledName": "$s23flutter_document_picker27FlutterDocumentPickerParamsV",
+      "moduleName": "flutter_document_picker",
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

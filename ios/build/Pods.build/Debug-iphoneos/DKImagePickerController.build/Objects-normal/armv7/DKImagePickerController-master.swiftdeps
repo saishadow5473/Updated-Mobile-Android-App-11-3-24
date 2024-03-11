@@ -1,0 +1,38 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "ad3faba98c6791e29953235ac2d86229f64efe5892293e2b1becbe3427ffa6ae"
+build_start_time: [1670079617, 760518074]
+build_end_time: [1670079619, 322240829]
+inputs:
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageBaseManager.swift": [1669698108, 390504598]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageDataManager.swift": [1669698108, 389289379]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageGroupDataManager.swift": [1669698108, 389928817]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset+Export.swift": [1669698108, 391448497]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset+Fetch.swift": [1669698108, 392671585]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset.swift": [1669698108, 393245697]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAssetGroup.swift": [1669698108, 392029285]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImageAssetExporter.swift": [1669698108, 395214557]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImageExtensionController.swift"
+  : [1669698108, 394281387]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerController.swift": [1669698108, 396165847]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerControllerBaseUIDelegate.swift"
+  : [1669698108, 396948814]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKPopoverViewController.swift": [1669698108, 397802591]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/Resource/DKImagePickerControllerResource.swift"
+  : [1669698108, 446547508]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupCellItemProtocol.swift"
+  : [1669698108, 402191162]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailBaseCell.swift"
+  : [1669698108, 402776718]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailCameraCell.swift"
+  : [1669698108, 401201725]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailImageCell.swift"
+  : [1669698108, 403319597]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailVideoCell.swift"
+  : [1669698108, 401708841]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupDetailVC.swift"
+  : [1669698108, 400240898]
+  ? "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupGridLayout.swift"
+  : [1669698108, 399297475]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupListVC.swift": [1669698108, 404025793]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKPermissionView.swift": [1669698108, 398798465]
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/DKImagePickerController/Sources/Extensions/DKImageExtensionGallery.swift": [1669698108, 386596202]

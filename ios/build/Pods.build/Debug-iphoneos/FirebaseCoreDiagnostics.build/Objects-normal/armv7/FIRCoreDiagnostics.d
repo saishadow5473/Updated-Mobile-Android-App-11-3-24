@@ -1,0 +1,63 @@
+dependencies: \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/FIRCoreDiagnostics.m \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Debug-iphoneos/FirebaseCoreDiagnostics.build/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/kcdata.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/uuid.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/netinet6.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/device.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach_debug.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach_machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/bank.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/darwin_posix_sys_types.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/netinet.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/net.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/darwin_cdefs.modulemap \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Debug-iphoneos/GoogleDataTransport.build/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach-o/dyld.modulemap \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GoogleDataTransport.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORTransport.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREventTransformer.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREventDataObject.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREvent.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORTargets.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREndpoints.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORConsoleLogger.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORClock.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/Target\ Support\ Files/GoogleDataTransport/GoogleDataTransport-umbrella.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Debug-iphoneos/GoogleUtilities.build/module.modulemap \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/UserDefaults/Public/GoogleUtilities/GULUserDefaults.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Reachability/Public/GoogleUtilities/GULReachabilityChecker.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkURLSession.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkMessageCode.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkLoggerProtocol.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkConstants.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULNetwork.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Network/Public/GoogleUtilities/GULMutableDictionary.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/Public/GoogleUtilities/GULNSData+zlib.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLoggerLevel.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLogger.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/NSURLSession+GULPromises.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULURLSessionDataResponse.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULSecureCoding.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainUtils.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainStorage.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorageUserDefaults.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorage.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorable.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULAppEnvironmentUtil.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULSceneDelegateSwizzler.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULApplication.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULAppDelegateSwizzler.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/Target\ Support\ Files/GoogleUtilities/GoogleUtilities-umbrella.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreDiagnostics/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsData.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreDiagnostics/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsInterop.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Debug-iphoneos/nanopb.build/module.modulemap \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/nanopb/pb_encode.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/nanopb/pb_decode.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/nanopb/pb_common.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/nanopb/pb.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/Target\ Support\ Files/nanopb/nanopb-umbrella.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.h

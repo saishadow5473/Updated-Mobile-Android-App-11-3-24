@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "a0df9f1994c9d6a40e22219310a33a6973c934de648fb2f92285b1adbf55a167"
+build_start_time: [1670079639, 158450126]
+build_end_time: [1670079640, 509134054]
+inputs:
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_document_picker-5.1.0/ios/Classes/SwiftFlutterDocumentPickerDelegate.swift"
+  : [1665990744, 401103258]
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_document_picker-5.1.0/ios/Classes/SwiftFlutterDocumentPickerPlugin.swift"
+  : [1665990744, 413715839]

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1068591848947",
+    "firebase_url": "https://indiahealthlinkapp.firebaseio.com",
+    "project_id": "indiahealthlinkapp",
+    "storage_bucket": "indiahealthlinkapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068591848947:android:4f1137c7fa84169d048686",
+        "android_client_info": {
+          "package_name": "com.indiahealthlink.ihlhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068591848947-dfmues44s14vfku68mdkd818sa5fnnpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDywpqHSTvZnQj6LoqLv_cKCR3-UAXQaUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068591848947-dfmues44s14vfku68mdkd818sa5fnnpp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1068591848947-dt9obhjlpto5sgm509jn0sc6k9v55sjq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.indiahealthlink.ihlhealth"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

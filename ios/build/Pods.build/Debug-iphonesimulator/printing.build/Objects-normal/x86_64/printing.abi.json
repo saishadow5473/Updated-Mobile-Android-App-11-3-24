@@ -1,0 +1,1887 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "WebKit",
+      "printedName": "WebKit",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "printing",
+      "printedName": "printing",
+      "declKind": "Import",
+      "moduleName": "printing",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "PrintingPlugin",
+      "printedName": "PrintingPlugin",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "channel",
+          "printedName": "channel",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodChannel",
+              "printedName": "Flutter.FlutterMethodChannel",
+              "usr": "c:objc(cs)FlutterMethodChannel"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing14PrintingPluginC7channel33_6FF184931A26925A7B008FED8A176594LLSo20FlutterMethodChannelCvp",
+          "mangledName": "$s8printing14PrintingPluginC7channel33_6FF184931A26925A7B008FED8A176594LLSo20FlutterMethodChannelCvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "jobs",
+          "printedName": "jobs",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.UInt32 : printing.PrintJob]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UInt32",
+                  "printedName": "Swift.UInt32",
+                  "usr": "s:s6UInt32V"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "PrintJob",
+                  "printedName": "printing.PrintJob",
+                  "usr": "c:@M@printing@objc(cs)PrintJob"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvp",
+          "mangledName": "$s8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvp",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.UInt32 : printing.PrintJob]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UInt32",
+                      "printedName": "Swift.UInt32",
+                      "usr": "s:s6UInt32V"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "PrintJob",
+                      "printedName": "printing.PrintJob",
+                      "usr": "c:@M@printing@objc(cs)PrintJob"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvg",
+              "mangledName": "$s8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvg",
+              "moduleName": "printing",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.UInt32 : printing.PrintJob]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UInt32",
+                      "printedName": "Swift.UInt32",
+                      "usr": "s:s6UInt32V"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "PrintJob",
+                      "printedName": "printing.PrintJob",
+                      "usr": "c:@M@printing@objc(cs)PrintJob"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvs",
+              "mangledName": "$s8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvs",
+              "moduleName": "printing",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvM",
+              "mangledName": "$s8printing14PrintingPluginC4jobsSDys6UInt32VAA8PrintJobCGvM",
+              "moduleName": "printing",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PrintingPlugin",
+              "printedName": "printing.PrintingPlugin",
+              "usr": "c:@M@printing@objc(cs)PrintingPlugin"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodChannel",
+              "printedName": "Flutter.FlutterMethodChannel",
+              "usr": "c:objc(cs)FlutterMethodChannel"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:8printing14PrintingPluginCyACSo20FlutterMethodChannelCcfc",
+          "mangledName": "$s8printing14PrintingPluginCyACSo20FlutterMethodChannelCcfc",
+          "moduleName": "printing",
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "setDocument",
+          "printedName": "setDocument(job:doc:size:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UInt32",
+              "printedName": "Swift.UInt32",
+              "usr": "s:s6UInt32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafePointer",
+              "printedName": "Swift.UnsafePointer<Swift.UInt8>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UInt8",
+                  "printedName": "Swift.UInt8",
+                  "usr": "s:s5UInt8V"
+                }
+              ],
+              "usr": "s:SP"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UInt64",
+              "printedName": "Swift.UInt64",
+              "usr": "s:s6UInt64V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@printing@objc(cs)PrintingPlugin(cm)setDocumentWithJob:doc:size:",
+          "mangledName": "$s8printing14PrintingPluginC11setDocument3job3doc4sizeys6UInt32V_SPys5UInt8VGs6UInt64VtFZ",
+          "moduleName": "printing",
+          "static": true,
+          "objc_name": "setDocumentWithJob:doc:size:",
+          "declAttributes": [
+            "Final",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setError",
+          "printedName": "setError(job:message:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UInt32",
+              "printedName": "Swift.UInt32",
+              "usr": "s:s6UInt32V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafePointer",
+              "printedName": "Swift.UnsafePointer<Swift.Int8>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int8",
+                  "printedName": "Swift.Int8",
+                  "usr": "s:s4Int8V"
+                }
+              ],
+              "usr": "s:SP"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@printing@objc(cs)PrintingPlugin(cm)setErrorWithJob:message:",
+          "mangledName": "$s8printing14PrintingPluginC8setError3job7messageys6UInt32V_SPys4Int8VGtFZ",
+          "moduleName": "printing",
+          "static": true,
+          "objc_name": "setErrorWithJob:message:",
+          "declAttributes": [
+            "Final",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "register",
+          "printedName": "register(with:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterPluginRegistrar",
+              "printedName": "Flutter.FlutterPluginRegistrar",
+              "usr": "c:objc(pl)FlutterPluginRegistrar"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@printing@objc(cs)PrintingPlugin(cm)registerWithRegistrar:",
+          "mangledName": "$s8printing14PrintingPluginC8register4withySo07FlutterC9Registrar_p_tFZ",
+          "moduleName": "printing",
+          "static": true,
+          "objc_name": "registerWithRegistrar:",
+          "declAttributes": [
+            "Final",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "handle",
+          "printedName": "handle(_:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@printing@objc(cs)PrintingPlugin(im)handleMethodCall:result:",
+          "mangledName": "$s8printing14PrintingPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "objc_name": "handleMethodCall:result:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "onLayout",
+          "printedName": "onLayout(printJob:width:height:marginLeft:marginTop:marginRight:marginBottom:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing14PrintingPluginC8onLayout8printJob5width6height10marginLeft0J3Top0J5Right0J6BottomyAA05PrintG0C_12CoreGraphics7CGFloatVA5PtF",
+          "mangledName": "$s8printing14PrintingPluginC8onLayout8printJob5width6height10marginLeft0J3Top0J5Right0J6BottomyAA05PrintG0C_12CoreGraphics7CGFloatVA5PtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "onCompleted",
+          "printedName": "onCompleted(printJob:completed:error:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.NSString?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NSString",
+                  "printedName": "Foundation.NSString",
+                  "usr": "c:objc(cs)NSString"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing14PrintingPluginC11onCompleted8printJob9completed5erroryAA05PrintG0C_SbSo8NSStringCSgtF",
+          "mangledName": "$s8printing14PrintingPluginC11onCompleted8printJob9completed5erroryAA05PrintG0C_SbSo8NSStringCSgtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "onHtmlRendered",
+          "printedName": "onHtmlRendered(printJob:pdfData:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing14PrintingPluginC14onHtmlRendered8printJob7pdfDatayAA05PrintH0C_10Foundation0J0VtF",
+          "mangledName": "$s8printing14PrintingPluginC14onHtmlRendered8printJob7pdfDatayAA05PrintH0C_10Foundation0J0VtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "onHtmlError",
+          "printedName": "onHtmlError(printJob:error:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing14PrintingPluginC11onHtmlError8printJob5erroryAA05PrintH0C_SStF",
+          "mangledName": "$s8printing14PrintingPluginC11onHtmlError8printJob5erroryAA05PrintH0C_SStF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "onPageRasterized",
+          "printedName": "onPageRasterized(printJob:imageData:width:height:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing14PrintingPluginC16onPageRasterized8printJob9imageData5width6heightyAA05PrintH0C_10Foundation0J0VS2itF",
+          "mangledName": "$s8printing14PrintingPluginC16onPageRasterized8printJob9imageData5width6heightyAA05PrintH0C_10Foundation0J0VS2itF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "onPageRasterEnd",
+          "printedName": "onPageRasterEnd(printJob:error:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing14PrintingPluginC15onPageRasterEnd8printJob5erroryAA05PrintI0C_SSSgtF",
+          "mangledName": "$s8printing14PrintingPluginC15onPageRasterEnd8printJob5erroryAA05PrintI0C_SSSgtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PrintingPlugin",
+              "printedName": "printing.PrintingPlugin",
+              "usr": "c:@M@printing@objc(cs)PrintingPlugin"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@printing@objc(cs)PrintingPlugin(im)init",
+          "mangledName": "$s8printing14PrintingPluginCACycfc",
+          "moduleName": "printing",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@printing@objc(cs)PrintingPlugin",
+      "mangledName": "$s8printing14PrintingPluginC",
+      "moduleName": "printing",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "hasMissingDesignatedInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "WebKit",
+      "printedName": "WebKit",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "printing"
+    },
+    {
+      "kind": "Import",
+      "name": "printing",
+      "printedName": "printing",
+      "declKind": "Import",
+      "moduleName": "printing",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "Function",
+      "name": "dataProviderReleaseDataCallback",
+      "printedName": "dataProviderReleaseDataCallback(info:data:size:)",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Void",
+          "printedName": "()"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Optional",
+          "printedName": "Swift.UnsafeMutableRawPointer?",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "UnsafeMutableRawPointer",
+              "printedName": "Swift.UnsafeMutableRawPointer",
+              "usr": "s:Sv"
+            }
+          ],
+          "usr": "s:Sq"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "UnsafeRawPointer",
+          "printedName": "Swift.UnsafeRawPointer",
+          "usr": "s:SV"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Int",
+          "printedName": "Swift.Int",
+          "usr": "s:Si"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:8printing31dataProviderReleaseDataCallback4info0B04sizeySvSg_SVSitF",
+      "mangledName": "$s8printing31dataProviderReleaseDataCallback4info0B04sizeySvSg_SVSitF",
+      "moduleName": "printing",
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "PrintJob",
+      "printedName": "PrintJob",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "printing",
+          "printedName": "printing",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PrintingPlugin",
+              "printedName": "printing.PrintingPlugin",
+              "usr": "c:@M@printing@objc(cs)PrintingPlugin"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobCAA33_8513FCA205AC62BEC931B97878D84065LLAA14PrintingPluginCvp",
+          "mangledName": "$s8printing8PrintJobCAA33_8513FCA205AC62BEC931B97878D84065LLAA14PrintingPluginCvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "index",
+          "printedName": "index",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC5indexSivp",
+          "mangledName": "$s8printing8PrintJobC5indexSivp",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8printing8PrintJobC5indexSivg",
+              "mangledName": "$s8printing8PrintJobC5indexSivg",
+              "moduleName": "printing",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8printing8PrintJobC5indexSivs",
+              "mangledName": "$s8printing8PrintJobC5indexSivs",
+              "moduleName": "printing",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:8printing8PrintJobC5indexSivM",
+              "mangledName": "$s8printing8PrintJobC5indexSivM",
+              "moduleName": "printing",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "pdfDocument",
+          "printedName": "pdfDocument",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "CoreGraphics.CGPDFDocument?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "CGPDFDocument",
+                  "printedName": "CoreGraphics.CGPDFDocument",
+                  "usr": "c:@T@CGPDFDocumentRef"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC11pdfDocument33_8513FCA205AC62BEC931B97878D84065LLSo16CGPDFDocumentRefaSgvp",
+          "mangledName": "$s8printing8PrintJobC11pdfDocument33_8513FCA205AC62BEC931B97878D84065LLSo16CGPDFDocumentRefaSgvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "urlObservation",
+          "printedName": "urlObservation",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.NSKeyValueObservation?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NSKeyValueObservation",
+                  "printedName": "Foundation.NSKeyValueObservation",
+                  "usr": "c:@M@Foundation@objc(cs)_NSKeyValueObservation"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC14urlObservation33_8513FCA205AC62BEC931B97878D84065LL10Foundation010NSKeyValueE0CSgvp",
+          "mangledName": "$s8printing8PrintJobC14urlObservation33_8513FCA205AC62BEC931B97878D84065LL10Foundation010NSKeyValueE0CSgvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "jobName",
+          "printedName": "jobName",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC7jobName33_8513FCA205AC62BEC931B97878D84065LLSSSgvp",
+          "mangledName": "$s8printing8PrintJobC7jobName33_8513FCA205AC62BEC931B97878D84065LLSSSgvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "printerName",
+          "printedName": "printerName",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC11printerName33_8513FCA205AC62BEC931B97878D84065LLSSSgvp",
+          "mangledName": "$s8printing8PrintJobC11printerName33_8513FCA205AC62BEC931B97878D84065LLSSSgvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "orientation",
+          "printedName": "orientation",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "UIKit.UIPrintInfo.Orientation?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Orientation",
+                  "printedName": "UIKit.UIPrintInfo.Orientation",
+                  "usr": "c:@E@UIPrintInfoOrientation"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC11orientation33_8513FCA205AC62BEC931B97878D84065LLSo22UIPrintInfoOrientationVSgvp",
+          "mangledName": "$s8printing8PrintJobC11orientation33_8513FCA205AC62BEC931B97878D84065LLSo22UIPrintInfoOrientationVSgvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 6,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "semaphore",
+          "printedName": "semaphore",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "DispatchSemaphore",
+              "printedName": "Dispatch.DispatchSemaphore",
+              "usr": "c:objc(cs)OS_dispatch_semaphore"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC9semaphore33_8513FCA205AC62BEC931B97878D84065LLSo012OS_dispatch_D0Cvp",
+          "mangledName": "$s8printing8PrintJobC9semaphore33_8513FCA205AC62BEC931B97878D84065LLSo012OS_dispatch_D0Cvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 7,
+          "isLet": true,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "dynamic",
+          "printedName": "dynamic",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC7dynamic33_8513FCA205AC62BEC931B97878D84065LLSbvp",
+          "mangledName": "$s8printing8PrintJobC7dynamic33_8513FCA205AC62BEC931B97878D84065LLSbvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 8,
+          "hasStorage": true
+        },
+        {
+          "kind": "Var",
+          "name": "currentSize",
+          "printedName": "currentSize",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "CoreGraphics.CGSize?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "CGSize",
+                  "printedName": "CoreGraphics.CGSize",
+                  "usr": "c:@S@CGSize"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:8printing8PrintJobC11currentSize33_8513FCA205AC62BEC931B97878D84065LLSo6CGSizeVSgvp",
+          "mangledName": "$s8printing8PrintJobC11currentSize33_8513FCA205AC62BEC931B97878D84065LLSo6CGSizeVSgvp",
+          "moduleName": "printing",
+          "isInternal": true,
+          "declAttributes": [
+            "Custom",
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 9,
+          "hasStorage": true
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(printing:index:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "PrintingPlugin",
+              "printedName": "printing.PrintingPlugin",
+              "usr": "c:@M@printing@objc(cs)PrintingPlugin"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:8printing8PrintJobCAA5indexAcA14PrintingPluginC_Sitcfc",
+          "mangledName": "$s8printing8PrintJobCAA5indexAcA14PrintingPluginC_Sitcfc",
+          "moduleName": "printing",
+          "declAttributes": [
+            "Custom"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "drawPage",
+          "printedName": "drawPage(at:in:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@printing@objc(cs)PrintJob(im)drawPageAtIndex:inRect:",
+          "mangledName": "$s8printing8PrintJobC8drawPage2at2inySi_So6CGRectVtF",
+          "moduleName": "printing",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "drawPageAtIndex:inRect:",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "cancelJob",
+          "printedName": "cancelJob(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC06cancelC0yySSSgF",
+          "mangledName": "$s8printing8PrintJobC06cancelC0yySSSgF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setDocument",
+          "printedName": "setDocument(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.Data?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Data",
+                  "printedName": "Foundation.Data",
+                  "usr": "s:10Foundation4DataV"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC11setDocumentyy10Foundation4DataVSgF",
+          "mangledName": "$s8printing8PrintJobC11setDocumentyy10Foundation4DataVSgF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "numberOfPages",
+          "printedName": "numberOfPages",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "c:@M@printing@objc(cs)PrintJob(py)numberOfPages",
+          "mangledName": "$s8printing8PrintJobC13numberOfPagesSivp",
+          "moduleName": "printing",
+          "overriding": true,
+          "isOpen": true,
+          "objc_name": "numberOfPages",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Custom",
+            "Override"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "c:@M@printing@objc(cs)PrintJob(im)numberOfPages",
+              "mangledName": "$s8printing8PrintJobC13numberOfPagesSivg",
+              "moduleName": "printing",
+              "overriding": true,
+              "isOpen": true,
+              "objc_name": "numberOfPages",
+              "declAttributes": [
+                "Dynamic",
+                "ObjC",
+                "Custom",
+                "Override"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "completionHandler",
+          "printedName": "completionHandler(printController:completed:error:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UIPrintInteractionController",
+              "printedName": "UIKit.UIPrintInteractionController",
+              "usr": "c:objc(cs)UIPrintInteractionController"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.Error?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Error",
+                  "printedName": "Swift.Error",
+                  "usr": "s:s5ErrorP"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC17completionHandler15printController9completed5errorySo018UIPrintInteractionG0C_Sbs5Error_pSgtF",
+          "mangledName": "$s8printing8PrintJobC17completionHandler15printController9completed5errorySo018UIPrintInteractionG0C_Sbs5Error_pSgtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "printInteractionController",
+          "printedName": "printInteractionController(_:cutLengthFor:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UIPrintInteractionController",
+              "printedName": "UIKit.UIPrintInteractionController",
+              "usr": "c:objc(cs)UIPrintInteractionController"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "UIPrintPaper",
+              "printedName": "UIKit.UIPrintPaper",
+              "usr": "c:objc(cs)UIPrintPaper"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@printing@objc(cs)PrintJob(im)printInteractionController:cutLengthForPaper:",
+          "mangledName": "$s8printing8PrintJobC26printInteractionController_12cutLengthFor12CoreGraphics7CGFloatVSo07UIPrinteF0C_So0M5PaperCtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "objc_name": "printInteractionController:cutLengthForPaper:",
+          "declAttributes": [
+            "ObjC",
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "printPdf",
+          "printedName": "printPdf(name:withPageSize:andMargin:withPrinter:dynamically:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGSize",
+              "printedName": "CoreGraphics.CGSize",
+              "usr": "c:@S@CGSize"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC8printPdf4name12withPageSize9andMargin0G7Printer11dynamicallyySS_So6CGSizeVSo6CGRectVSSSgSbtF",
+          "mangledName": "$s8printing8PrintJobC8printPdf4name12withPageSize9andMargin0G7Printer11dynamicallyySS_So6CGSizeVSo6CGRectVSSSgSbtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "sharePdf",
+          "printedName": "sharePdf(data:withSourceRect:andName:subject:body:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC8sharePdf4data14withSourceRect7andName7subject4bodyy10Foundation4DataV_So6CGRectVS2SSgAOtFZ",
+          "mangledName": "$s8printing8PrintJobC8sharePdf4data14withSourceRect7andName7subject4bodyy10Foundation4DataV_So6CGRectVS2SSgAOtFZ",
+          "moduleName": "printing",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "convertHtml",
+          "printedName": "convertHtml(_:withPageSize:andMargin:andBaseUrl:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.URL?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "URL",
+                  "printedName": "Foundation.URL",
+                  "usr": "s:10Foundation3URLV"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC11convertHtml_12withPageSize9andMargin0I7BaseUrlySS_So6CGRectVAI10Foundation3URLVSgtF",
+          "mangledName": "$s8printing8PrintJobC11convertHtml_12withPageSize9andMargin0I7BaseUrlySS_So6CGRectVAI10Foundation3URLVSgtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "pickPrinter",
+          "printedName": "pickPrinter(result:withSourceRect:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGRect",
+              "printedName": "CoreGraphics.CGRect",
+              "usr": "c:@S@CGRect"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC11pickPrinter6result14withSourceRectyyypSgc_So6CGRectVtFZ",
+          "mangledName": "$s8printing8PrintJobC11pickPrinter6result14withSourceRectyyypSgc_So6CGRectVtFZ",
+          "moduleName": "printing",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "rasterPdf",
+          "printedName": "rasterPdf(data:pages:scale:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.Int]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.Int]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Int",
+                      "printedName": "Swift.Int",
+                      "usr": "s:Si"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CGFloat",
+              "printedName": "CoreGraphics.CGFloat",
+              "usr": "s:12CoreGraphics7CGFloatV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC9rasterPdf4data5pages5scaley10Foundation4DataV_SaySiGSg12CoreGraphics7CGFloatVtF",
+          "mangledName": "$s8printing8PrintJobC9rasterPdf4data5pages5scaley10Foundation4DataV_SaySiGSg12CoreGraphics7CGFloatVtF",
+          "moduleName": "printing",
+          "isOpen": true,
+          "declAttributes": [
+            "Custom"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "printingInfo",
+          "printedName": "printingInfo()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "NSDictionary",
+              "printedName": "Foundation.NSDictionary",
+              "usr": "c:objc(cs)NSDictionary"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:8printing8PrintJobC0A4InfoSo12NSDictionaryCyFZ",
+          "mangledName": "$s8printing8PrintJobC0A4InfoSo12NSDictionaryCyFZ",
+          "moduleName": "printing",
+          "static": true,
+          "declAttributes": [
+            "Custom",
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PrintJob",
+              "printedName": "printing.PrintJob",
+              "usr": "c:@M@printing@objc(cs)PrintJob"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@printing@objc(cs)PrintJob(im)init",
+          "mangledName": "$s8printing8PrintJobCACycfc",
+          "moduleName": "printing",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@printing@objc(cs)PrintJob",
+      "mangledName": "$s8printing8PrintJobC",
+      "moduleName": "printing",
+      "isOpen": true,
+      "declAttributes": [
+        "Custom",
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)UIPrintPageRenderer",
+      "superclassNames": [
+        "UIKit.UIPrintPageRenderer",
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

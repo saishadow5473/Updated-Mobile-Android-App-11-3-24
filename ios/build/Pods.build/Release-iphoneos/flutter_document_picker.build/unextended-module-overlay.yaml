@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/IHL/IHL/IHLCARE/IHLCareNew/build/ios/Release-iphoneos/flutter_document_picker/flutter_document_picker.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Release-iphoneos/flutter_document_picker.build/unextended-module.modulemap",
+    }]
+  }]
+}

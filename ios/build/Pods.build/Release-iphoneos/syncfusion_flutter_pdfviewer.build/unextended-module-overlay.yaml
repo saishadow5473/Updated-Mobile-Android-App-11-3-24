@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/IHL/IHL/IHLCARE/IHLCareNew/build/ios/Release-iphoneos/syncfusion_flutter_pdfviewer/syncfusion_flutter_pdfviewer.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Release-iphoneos/syncfusion_flutter_pdfviewer.build/unextended-module.modulemap",
+    }]
+  }]
+}

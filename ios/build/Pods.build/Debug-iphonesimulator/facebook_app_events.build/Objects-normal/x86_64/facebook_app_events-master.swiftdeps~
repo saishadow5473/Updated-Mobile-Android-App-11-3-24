@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "1ba288fd9324f96b6ead67cb0dabe630653be2a2981e5c6e79424fcb1d5e7de6"
+build_start_time: [1656308640, 951987981]
+build_end_time: [1656308661, 806136131]
+inputs:
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/facebook_app_events-0.12.0/ios/Classes/SwiftFacebookAppEventsPlugin.swift"
+  : [1619052288, 0]

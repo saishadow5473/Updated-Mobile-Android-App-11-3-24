@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1068591848947-dt9obhjlpto5sgm509jn0sc6k9v55sjq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1068591848947-dt9obhjlpto5sgm509jn0sc6k9v55sjq</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1068591848947-af40qhdt61m9dgg3ak8pok5s7dmprm56.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA2xd6q_YXHnAG9nU5b5jrTbA8PsxrI5Dg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1068591848947</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.indiahealthlink.ihlhealth</string>
+	<key>PROJECT_ID</key>
+	<string>indiahealthlinkapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>indiahealthlinkapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1068591848947:ios:a0892cde6004b0ef048686</string>
+	<key>DATABASE_URL</key>
+	<string>https://indiahealthlinkapp.firebaseio.com</string>
+</dict>
+</plist>

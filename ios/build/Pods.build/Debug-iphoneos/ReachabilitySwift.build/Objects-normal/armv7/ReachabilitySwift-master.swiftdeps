@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "f0df7516d5582d19d9b6948b2bddd08989ec5c8248da0d314067b69d7562d383"
+build_start_time: [1670079600, 896329879]
+build_end_time: [1670079602, 341398000]
+inputs:
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/ReachabilitySwift/Sources/Reachability.swift": [1669698112, 99900960]

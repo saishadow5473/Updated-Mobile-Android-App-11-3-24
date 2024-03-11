@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "bb8f890eae7490b96e5595466037460a92fc1f4779b1101b673315ff42fa5c2e"
+build_start_time: [1666070609, 164775848]
+build_end_time: [1666070631, 845388889]
+inputs:
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/printing-5.9.3/ios/Classes/PrintJob.swift": [1665990743, 466871738]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/printing-5.9.3/ios/Classes/PrintingPlugin.swift": [1665990743, 461847543]

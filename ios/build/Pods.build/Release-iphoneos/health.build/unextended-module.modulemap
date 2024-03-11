@@ -1,0 +1,10 @@
+framework module health {
+  umbrella header "health-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module health.__Swift {
+    exclude header "health-Swift.h"
+}

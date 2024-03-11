@@ -1,0 +1,63 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    invalid_assignment: warning
+    missing_return: warning
+    dead_code: warning
+    avoid_returning_null_for_future: warning
+    missing_enum_constant_in_switch: warning
+    # avoid_print: warning
+    avoid_empty_else: warning
+    prefer_void_to_null: warning
+    empty_statements: warning
+    prefer_single_quotes: warning
+
+linter:
+  rules:
+    # - avoid_print
+    - avoid_returning_null_for_future
+    - empty_statements
+    - avoid_empty_else
+    - prefer_relative_imports
+    - avoid_setters_without_getters
+    - always_specify_types
+    - avoid_unused_constructor_parameters
+    - prefer_const_constructors
+    - prefer_const_constructors_in_immutables
+    # - avoid_init_to_null  # Avoid initializing variables to null.
+    # - avoid_private_typedef_functions  # Avoid private typedef functions.
+    # - avoid_returning_null_for_future  # Avoid returning null for Future functions.
+    # - camel_case_types: error  # Enforce camel case for type names.
+    # - no_duplicate_case_values: error  # Avoid duplicate case values in switch statements.
+    # - no_empty_block: error  # Avoid empty blocks of code.
+    # - no_empty_catches: error  # Avoid empty catch blocks in exception handling.
+    # - no_equal_then_else: error  # Avoid if-else branches with identical code.
+    # - no_final_finalizers: error  # Avoid using finalizers (destructors).
+    # - no_shadowing_import: error  # Avoid shadowing imported definitions.
+    # - no_unnecessary_null_aware_assignments: error  # Avoid unnecessary null-aware
+# The lint rules applied to this project can be customized in the
+# section below to disable rules from the `package:flutter_lints/flutter.yaml`
+# included above or to enable additional rules. A list of all available lints
+# and their documentation is published at
+# https://dart-lang.github.io/linter/lints/index.html.
+#
+# Instead of disabling a lint rule for the entire project in the
+# section below, it can also be suppressed for a single line of code
+# or a specific dart file by using the `// ignore: name_of_lint` and
+# `// ignore_for_file: name_of_lint` syntax on the line or in the file
+# producing the lint.
+
+# avoid_print: false  # Uncomment to disable the `avoid_print` rule
+# prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options

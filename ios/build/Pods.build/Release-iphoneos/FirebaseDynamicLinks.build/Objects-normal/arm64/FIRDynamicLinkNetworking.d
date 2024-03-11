@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/FIRDynamicLinkNetworking.m \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/build/Pods.build/Release-iphoneos/FirebaseDynamicLinks.build/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/kcdata.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/uuid.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/netinet6.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/device.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach_debug.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach_machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/bank.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/darwin_posix_sys_types.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/netinet.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/net.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/darwin_cdefs.modulemap \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/FIRDynamicLinkNetworking+Private.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/FIRDynamicLinkNetworking.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/mach-o/dyld.modulemap \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/Public/FirebaseDynamicLinks/FIRDynamicLinksCommon.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/GINInvocation/GINArgument.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/GINInvocation/GINInvocation.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/Utilities/FDLDeviceHeuristicsHelper.h \
+  /Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Pods/FirebaseDynamicLinks/FirebaseDynamicLinks/Sources/Utilities/FDLUtilities.h

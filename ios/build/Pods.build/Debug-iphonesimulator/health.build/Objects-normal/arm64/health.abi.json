@@ -1,0 +1,3464 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Flutter",
+      "printedName": "Flutter",
+      "declKind": "Import",
+      "moduleName": "health"
+    },
+    {
+      "kind": "Import",
+      "name": "HealthKit",
+      "printedName": "HealthKit",
+      "declKind": "Import",
+      "moduleName": "health"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "health"
+    },
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "health"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "health"
+    },
+    {
+      "kind": "Import",
+      "name": "health",
+      "printedName": "health",
+      "declKind": "Import",
+      "moduleName": "health",
+      "declAttributes": [
+        "Exported"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "SwiftHealthPlugin",
+      "printedName": "SwiftHealthPlugin",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "healthStore",
+          "printedName": "healthStore",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "HKHealthStore",
+              "printedName": "HealthKit.HKHealthStore",
+              "usr": "c:objc(cs)HKHealthStore"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC0A5StoreSo08HKHealthE0Cvp",
+          "mangledName": "$s6health17SwiftHealthPluginC0A5StoreSo08HKHealthE0Cvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HKHealthStore",
+                  "printedName": "HealthKit.HKHealthStore",
+                  "usr": "c:objc(cs)HKHealthStore"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC0A5StoreSo08HKHealthE0Cvg",
+              "mangledName": "$s6health17SwiftHealthPluginC0A5StoreSo08HKHealthE0Cvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "healthDataTypes",
+          "printedName": "healthDataTypes",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[HealthKit.HKSampleType]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HKSampleType",
+                  "printedName": "HealthKit.HKSampleType",
+                  "usr": "c:objc(cs)HKSampleType"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvp",
+          "mangledName": "$s6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvp",
+          "moduleName": "health",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[HealthKit.HKSampleType]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvg",
+              "mangledName": "$s6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvg",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[HealthKit.HKSampleType]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvs",
+              "mangledName": "$s6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvs",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvM",
+              "mangledName": "$s6health17SwiftHealthPluginC0A9DataTypesSaySo12HKSampleTypeCGvM",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "heartRateEventTypes",
+          "printedName": "heartRateEventTypes",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Set",
+              "printedName": "Swift.Set<HealthKit.HKSampleType>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HKSampleType",
+                  "printedName": "HealthKit.HKSampleType",
+                  "usr": "c:objc(cs)HKSampleType"
+                }
+              ],
+              "usr": "s:Sh"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvp",
+          "mangledName": "$s6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvp",
+          "moduleName": "health",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Set",
+                  "printedName": "Swift.Set<HealthKit.HKSampleType>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sh"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvg",
+              "mangledName": "$s6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvg",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Set",
+                  "printedName": "Swift.Set<HealthKit.HKSampleType>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sh"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvs",
+              "mangledName": "$s6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvs",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvM",
+              "mangledName": "$s6health17SwiftHealthPluginC19heartRateEventTypesShySo12HKSampleTypeCGvM",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "headacheType",
+          "printedName": "headacheType",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Set",
+              "printedName": "Swift.Set<HealthKit.HKSampleType>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HKSampleType",
+                  "printedName": "HealthKit.HKSampleType",
+                  "usr": "c:objc(cs)HKSampleType"
+                }
+              ],
+              "usr": "s:Sh"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvp",
+          "mangledName": "$s6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvp",
+          "moduleName": "health",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Set",
+                  "printedName": "Swift.Set<HealthKit.HKSampleType>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sh"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvg",
+              "mangledName": "$s6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvg",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Set",
+                  "printedName": "Swift.Set<HealthKit.HKSampleType>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sh"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvs",
+              "mangledName": "$s6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvs",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvM",
+              "mangledName": "$s6health17SwiftHealthPluginC12headacheTypeShySo08HKSampleF0CGvM",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "allDataTypes",
+          "printedName": "allDataTypes",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Set",
+              "printedName": "Swift.Set<HealthKit.HKSampleType>",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HKSampleType",
+                  "printedName": "HealthKit.HKSampleType",
+                  "usr": "c:objc(cs)HKSampleType"
+                }
+              ],
+              "usr": "s:Sh"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvp",
+          "mangledName": "$s6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvp",
+          "moduleName": "health",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Set",
+                  "printedName": "Swift.Set<HealthKit.HKSampleType>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sh"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvg",
+              "mangledName": "$s6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvg",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Set",
+                  "printedName": "Swift.Set<HealthKit.HKSampleType>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:Sh"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvs",
+              "mangledName": "$s6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvs",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvM",
+              "mangledName": "$s6health17SwiftHealthPluginC12allDataTypesShySo12HKSampleTypeCGvM",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "dataTypesDict",
+          "printedName": "dataTypesDict",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : HealthKit.HKSampleType]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "HKSampleType",
+                  "printedName": "HealthKit.HKSampleType",
+                  "usr": "c:objc(cs)HKSampleType"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvp",
+          "mangledName": "$s6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvp",
+          "moduleName": "health",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : HealthKit.HKSampleType]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvg",
+              "mangledName": "$s6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvg",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : HealthKit.HKSampleType]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKSampleType",
+                      "printedName": "HealthKit.HKSampleType",
+                      "usr": "c:objc(cs)HKSampleType"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvs",
+              "mangledName": "$s6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvs",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvM",
+              "mangledName": "$s6health17SwiftHealthPluginC13dataTypesDictSDySSSo12HKSampleTypeCGvM",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "unitDict",
+          "printedName": "unitDict",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : HealthKit.HKUnit]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "HKUnit",
+                  "printedName": "HealthKit.HKUnit",
+                  "usr": "c:objc(cs)HKUnit"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvp",
+          "mangledName": "$s6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvp",
+          "moduleName": "health",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 6,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : HealthKit.HKUnit]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKUnit",
+                      "printedName": "HealthKit.HKUnit",
+                      "usr": "c:objc(cs)HKUnit"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvg",
+              "mangledName": "$s6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvg",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : HealthKit.HKUnit]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HKUnit",
+                      "printedName": "HealthKit.HKUnit",
+                      "usr": "c:objc(cs)HKUnit"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvs",
+              "mangledName": "$s6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvs",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvM",
+              "mangledName": "$s6health17SwiftHealthPluginC8unitDictSDySSSo6HKUnitCGvM",
+              "moduleName": "health",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "ACTIVE_ENERGY_BURNED",
+          "printedName": "ACTIVE_ENERGY_BURNED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC20ACTIVE_ENERGY_BURNEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC20ACTIVE_ENERGY_BURNEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 7,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC20ACTIVE_ENERGY_BURNEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC20ACTIVE_ENERGY_BURNEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BASAL_ENERGY_BURNED",
+          "printedName": "BASAL_ENERGY_BURNED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC19BASAL_ENERGY_BURNEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC19BASAL_ENERGY_BURNEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 8,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC19BASAL_ENERGY_BURNEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC19BASAL_ENERGY_BURNEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BLOOD_GLUCOSE",
+          "printedName": "BLOOD_GLUCOSE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC13BLOOD_GLUCOSESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC13BLOOD_GLUCOSESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 9,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC13BLOOD_GLUCOSESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC13BLOOD_GLUCOSESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BLOOD_OXYGEN",
+          "printedName": "BLOOD_OXYGEN",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC12BLOOD_OXYGENSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC12BLOOD_OXYGENSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 10,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12BLOOD_OXYGENSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC12BLOOD_OXYGENSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BLOOD_PRESSURE_DIASTOLIC",
+          "printedName": "BLOOD_PRESSURE_DIASTOLIC",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC24BLOOD_PRESSURE_DIASTOLICSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC24BLOOD_PRESSURE_DIASTOLICSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 11,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC24BLOOD_PRESSURE_DIASTOLICSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC24BLOOD_PRESSURE_DIASTOLICSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BLOOD_PRESSURE_SYSTOLIC",
+          "printedName": "BLOOD_PRESSURE_SYSTOLIC",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC23BLOOD_PRESSURE_SYSTOLICSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC23BLOOD_PRESSURE_SYSTOLICSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 12,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC23BLOOD_PRESSURE_SYSTOLICSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC23BLOOD_PRESSURE_SYSTOLICSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BODY_FAT_PERCENTAGE",
+          "printedName": "BODY_FAT_PERCENTAGE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC19BODY_FAT_PERCENTAGESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC19BODY_FAT_PERCENTAGESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 13,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC19BODY_FAT_PERCENTAGESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC19BODY_FAT_PERCENTAGESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BODY_MASS_INDEX",
+          "printedName": "BODY_MASS_INDEX",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC15BODY_MASS_INDEXSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC15BODY_MASS_INDEXSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 14,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC15BODY_MASS_INDEXSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC15BODY_MASS_INDEXSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "BODY_TEMPERATURE",
+          "printedName": "BODY_TEMPERATURE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC16BODY_TEMPERATURESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC16BODY_TEMPERATURESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 15,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC16BODY_TEMPERATURESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC16BODY_TEMPERATURESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "DIETARY_CARBS_CONSUMED",
+          "printedName": "DIETARY_CARBS_CONSUMED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC22DIETARY_CARBS_CONSUMEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC22DIETARY_CARBS_CONSUMEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 16,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC22DIETARY_CARBS_CONSUMEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC22DIETARY_CARBS_CONSUMEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "DIETARY_ENERGY_CONSUMED",
+          "printedName": "DIETARY_ENERGY_CONSUMED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC23DIETARY_ENERGY_CONSUMEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC23DIETARY_ENERGY_CONSUMEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 17,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC23DIETARY_ENERGY_CONSUMEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC23DIETARY_ENERGY_CONSUMEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "DIETARY_FATS_CONSUMED",
+          "printedName": "DIETARY_FATS_CONSUMED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC21DIETARY_FATS_CONSUMEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC21DIETARY_FATS_CONSUMEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 18,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC21DIETARY_FATS_CONSUMEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC21DIETARY_FATS_CONSUMEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "DIETARY_PROTEIN_CONSUMED",
+          "printedName": "DIETARY_PROTEIN_CONSUMED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC24DIETARY_PROTEIN_CONSUMEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC24DIETARY_PROTEIN_CONSUMEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 19,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC24DIETARY_PROTEIN_CONSUMEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC24DIETARY_PROTEIN_CONSUMEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "ELECTRODERMAL_ACTIVITY",
+          "printedName": "ELECTRODERMAL_ACTIVITY",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC22ELECTRODERMAL_ACTIVITYSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC22ELECTRODERMAL_ACTIVITYSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 20,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC22ELECTRODERMAL_ACTIVITYSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC22ELECTRODERMAL_ACTIVITYSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "FORCED_EXPIRATORY_VOLUME",
+          "printedName": "FORCED_EXPIRATORY_VOLUME",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC24FORCED_EXPIRATORY_VOLUMESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC24FORCED_EXPIRATORY_VOLUMESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 21,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC24FORCED_EXPIRATORY_VOLUMESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC24FORCED_EXPIRATORY_VOLUMESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEART_RATE",
+          "printedName": "HEART_RATE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC10HEART_RATESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC10HEART_RATESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 22,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC10HEART_RATESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC10HEART_RATESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEART_RATE_VARIABILITY_SDNN",
+          "printedName": "HEART_RATE_VARIABILITY_SDNN",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC27HEART_RATE_VARIABILITY_SDNNSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC27HEART_RATE_VARIABILITY_SDNNSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 23,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC27HEART_RATE_VARIABILITY_SDNNSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC27HEART_RATE_VARIABILITY_SDNNSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEIGHT",
+          "printedName": "HEIGHT",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC6HEIGHTSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC6HEIGHTSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 24,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC6HEIGHTSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC6HEIGHTSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HIGH_HEART_RATE_EVENT",
+          "printedName": "HIGH_HEART_RATE_EVENT",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC21HIGH_HEART_RATE_EVENTSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC21HIGH_HEART_RATE_EVENTSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 25,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC21HIGH_HEART_RATE_EVENTSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC21HIGH_HEART_RATE_EVENTSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "IRREGULAR_HEART_RATE_EVENT",
+          "printedName": "IRREGULAR_HEART_RATE_EVENT",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC26IRREGULAR_HEART_RATE_EVENTSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC26IRREGULAR_HEART_RATE_EVENTSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 26,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC26IRREGULAR_HEART_RATE_EVENTSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC26IRREGULAR_HEART_RATE_EVENTSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "LOW_HEART_RATE_EVENT",
+          "printedName": "LOW_HEART_RATE_EVENT",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC20LOW_HEART_RATE_EVENTSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC20LOW_HEART_RATE_EVENTSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 27,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC20LOW_HEART_RATE_EVENTSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC20LOW_HEART_RATE_EVENTSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "RESTING_HEART_RATE",
+          "printedName": "RESTING_HEART_RATE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC18RESTING_HEART_RATESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC18RESTING_HEART_RATESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 28,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC18RESTING_HEART_RATESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC18RESTING_HEART_RATESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "STEPS",
+          "printedName": "STEPS",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC5STEPSSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC5STEPSSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 29,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC5STEPSSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC5STEPSSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "WAIST_CIRCUMFERENCE",
+          "printedName": "WAIST_CIRCUMFERENCE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC19WAIST_CIRCUMFERENCESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC19WAIST_CIRCUMFERENCESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 30,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC19WAIST_CIRCUMFERENCESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC19WAIST_CIRCUMFERENCESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "WALKING_HEART_RATE",
+          "printedName": "WALKING_HEART_RATE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC18WALKING_HEART_RATESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC18WALKING_HEART_RATESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 31,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC18WALKING_HEART_RATESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC18WALKING_HEART_RATESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "WEIGHT",
+          "printedName": "WEIGHT",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC6WEIGHTSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC6WEIGHTSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 32,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC6WEIGHTSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC6WEIGHTSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "DISTANCE_WALKING_RUNNING",
+          "printedName": "DISTANCE_WALKING_RUNNING",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC24DISTANCE_WALKING_RUNNINGSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC24DISTANCE_WALKING_RUNNINGSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 33,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC24DISTANCE_WALKING_RUNNINGSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC24DISTANCE_WALKING_RUNNINGSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "FLIGHTS_CLIMBED",
+          "printedName": "FLIGHTS_CLIMBED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC15FLIGHTS_CLIMBEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC15FLIGHTS_CLIMBEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 34,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC15FLIGHTS_CLIMBEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC15FLIGHTS_CLIMBEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "WATER",
+          "printedName": "WATER",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC5WATERSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC5WATERSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 35,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC5WATERSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC5WATERSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "MINDFULNESS",
+          "printedName": "MINDFULNESS",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC11MINDFULNESSSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC11MINDFULNESSSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 36,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC11MINDFULNESSSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC11MINDFULNESSSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "SLEEP_IN_BED",
+          "printedName": "SLEEP_IN_BED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC12SLEEP_IN_BEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC12SLEEP_IN_BEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 37,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12SLEEP_IN_BEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC12SLEEP_IN_BEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "SLEEP_ASLEEP",
+          "printedName": "SLEEP_ASLEEP",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC12SLEEP_ASLEEPSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC12SLEEP_ASLEEPSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 38,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC12SLEEP_ASLEEPSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC12SLEEP_ASLEEPSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "SLEEP_AWAKE",
+          "printedName": "SLEEP_AWAKE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC11SLEEP_AWAKESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC11SLEEP_AWAKESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 39,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC11SLEEP_AWAKESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC11SLEEP_AWAKESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "EXERCISE_TIME",
+          "printedName": "EXERCISE_TIME",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC13EXERCISE_TIMESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC13EXERCISE_TIMESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 40,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC13EXERCISE_TIMESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC13EXERCISE_TIMESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "WORKOUT",
+          "printedName": "WORKOUT",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC7WORKOUTSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC7WORKOUTSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 41,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC7WORKOUTSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC7WORKOUTSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEADACHE_UNSPECIFIED",
+          "printedName": "HEADACHE_UNSPECIFIED",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC20HEADACHE_UNSPECIFIEDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC20HEADACHE_UNSPECIFIEDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 42,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC20HEADACHE_UNSPECIFIEDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC20HEADACHE_UNSPECIFIEDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEADACHE_NOT_PRESENT",
+          "printedName": "HEADACHE_NOT_PRESENT",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC20HEADACHE_NOT_PRESENTSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC20HEADACHE_NOT_PRESENTSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 43,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC20HEADACHE_NOT_PRESENTSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC20HEADACHE_NOT_PRESENTSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEADACHE_MILD",
+          "printedName": "HEADACHE_MILD",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC13HEADACHE_MILDSSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC13HEADACHE_MILDSSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 44,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC13HEADACHE_MILDSSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC13HEADACHE_MILDSSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEADACHE_MODERATE",
+          "printedName": "HEADACHE_MODERATE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC17HEADACHE_MODERATESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC17HEADACHE_MODERATESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 45,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC17HEADACHE_MODERATESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC17HEADACHE_MODERATESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "HEADACHE_SEVERE",
+          "printedName": "HEADACHE_SEVERE",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:6health17SwiftHealthPluginC15HEADACHE_SEVERESSvp",
+          "mangledName": "$s6health17SwiftHealthPluginC15HEADACHE_SEVERESSvp",
+          "moduleName": "health",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 46,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:6health17SwiftHealthPluginC15HEADACHE_SEVERESSvg",
+              "mangledName": "$s6health17SwiftHealthPluginC15HEADACHE_SEVERESSvg",
+              "moduleName": "health",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "PluginError",
+          "printedName": "PluginError",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "message",
+              "printedName": "message",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:6health17SwiftHealthPluginC0D5ErrorV7messageSSvp",
+              "mangledName": "$s6health17SwiftHealthPluginC0D5ErrorV7messageSSvp",
+              "moduleName": "health",
+              "declAttributes": [
+                "HasStorage"
+              ],
+              "fixedbinaryorder": 0,
+              "isLet": true,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:6health17SwiftHealthPluginC0D5ErrorV7messageSSvg",
+                  "mangledName": "$s6health17SwiftHealthPluginC0D5ErrorV7messageSSvg",
+                  "moduleName": "health",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(message:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "PluginError",
+                  "printedName": "health.SwiftHealthPlugin.PluginError",
+                  "usr": "s:6health17SwiftHealthPluginC0D5ErrorV"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:6health17SwiftHealthPluginC0D5ErrorV7messageAESS_tcfc",
+              "mangledName": "$s6health17SwiftHealthPluginC0D5ErrorV7messageAESS_tcfc",
+              "moduleName": "health",
+              "implicit": true,
+              "init_kind": "Designated"
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:6health17SwiftHealthPluginC0D5ErrorV",
+          "mangledName": "$s6health17SwiftHealthPluginC0D5ErrorV",
+          "moduleName": "health",
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "Error",
+              "printedName": "Error",
+              "usr": "s:s5ErrorP",
+              "mangledName": "$ss5ErrorP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Sendable",
+              "printedName": "Sendable",
+              "usr": "s:s8SendableP",
+              "mangledName": "$ss8SendableP"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "register",
+          "printedName": "register(with:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterPluginRegistrar",
+              "printedName": "Flutter.FlutterPluginRegistrar",
+              "usr": "c:objc(pl)FlutterPluginRegistrar"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@health@objc(cs)SwiftHealthPlugin(cm)registerWithRegistrar:",
+          "mangledName": "$s6health17SwiftHealthPluginC8register4withySo07FlutterD9Registrar_p_tFZ",
+          "moduleName": "health",
+          "static": true,
+          "objc_name": "registerWithRegistrar:",
+          "declAttributes": [
+            "Final",
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "handle",
+          "printedName": "handle(_:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@health@objc(cs)SwiftHealthPlugin(im)handleMethodCall:result:",
+          "mangledName": "$s6health17SwiftHealthPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF",
+          "moduleName": "health",
+          "isOpen": true,
+          "objc_name": "handleMethodCall:result:",
+          "declAttributes": [
+            "ObjC"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "checkIfHealthDataAvailable",
+          "printedName": "checkIfHealthDataAvailable(call:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC07checkIfC13DataAvailable4call6resultySo17FlutterMethodCallC_yypSgctF",
+          "mangledName": "$s6health17SwiftHealthPluginC07checkIfC13DataAvailable4call6resultySo17FlutterMethodCallC_yypSgctF",
+          "moduleName": "health",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "hasPermissions",
+          "printedName": "hasPermissions(call:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC14hasPermissions4call6resultySo17FlutterMethodCallC_yypSgctKF",
+          "mangledName": "$s6health17SwiftHealthPluginC14hasPermissions4call6resultySo17FlutterMethodCallC_yypSgctKF",
+          "moduleName": "health",
+          "isOpen": true,
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "hasPermission",
+          "printedName": "hasPermission(type:access:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.Bool?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "HKSampleType",
+              "printedName": "HealthKit.HKSampleType",
+              "usr": "c:objc(cs)HKSampleType"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC13hasPermission4type6accessSbSgSo12HKSampleTypeC_SitF",
+          "mangledName": "$s6health17SwiftHealthPluginC13hasPermission4type6accessSbSgSo12HKSampleTypeC_SitF",
+          "moduleName": "health",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "requestAuthorization",
+          "printedName": "requestAuthorization(call:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC20requestAuthorization4call6resultySo17FlutterMethodCallC_yypSgctKF",
+          "mangledName": "$s6health17SwiftHealthPluginC20requestAuthorization4call6resultySo17FlutterMethodCallC_yypSgctKF",
+          "moduleName": "health",
+          "isOpen": true,
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "writeData",
+          "printedName": "writeData(call:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC9writeData4call6resultySo17FlutterMethodCallC_yypSgctKF",
+          "mangledName": "$s6health17SwiftHealthPluginC9writeData4call6resultySo17FlutterMethodCallC_yypSgctKF",
+          "moduleName": "health",
+          "isOpen": true,
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getData",
+          "printedName": "getData(call:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC7getData4call6resultySo17FlutterMethodCallC_yypSgctF",
+          "mangledName": "$s6health17SwiftHealthPluginC7getData4call6resultySo17FlutterMethodCallC_yypSgctF",
+          "moduleName": "health",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getTotalStepsInInterval",
+          "printedName": "getTotalStepsInInterval(call:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "Flutter.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC23getTotalStepsInInterval4call6resultySo17FlutterMethodCallC_yypSgctF",
+          "mangledName": "$s6health17SwiftHealthPluginC23getTotalStepsInInterval4call6resultySo17FlutterMethodCallC_yypSgctF",
+          "moduleName": "health",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "unitLookUp",
+          "printedName": "unitLookUp(key:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "HKUnit",
+              "printedName": "HealthKit.HKUnit",
+              "usr": "c:objc(cs)HKUnit"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC10unitLookUp3keySo6HKUnitCSS_tF",
+          "mangledName": "$s6health17SwiftHealthPluginC10unitLookUp3keySo6HKUnitCSS_tF",
+          "moduleName": "health",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "dataTypeLookUp",
+          "printedName": "dataTypeLookUp(key:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "HKSampleType",
+              "printedName": "HealthKit.HKSampleType",
+              "usr": "c:objc(cs)HKSampleType"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC14dataTypeLookUp3keySo08HKSampleF0CSS_tF",
+          "mangledName": "$s6health17SwiftHealthPluginC14dataTypeLookUp3keySo08HKSampleF0CSS_tF",
+          "moduleName": "health",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "initializeTypes",
+          "printedName": "initializeTypes()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:6health17SwiftHealthPluginC15initializeTypesyyF",
+          "mangledName": "$s6health17SwiftHealthPluginC15initializeTypesyyF",
+          "moduleName": "health",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "SwiftHealthPlugin",
+              "printedName": "health.SwiftHealthPlugin",
+              "usr": "c:@M@health@objc(cs)SwiftHealthPlugin"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@health@objc(cs)SwiftHealthPlugin(im)init",
+          "mangledName": "$s6health17SwiftHealthPluginCACycfc",
+          "moduleName": "health",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@health@objc(cs)SwiftHealthPlugin",
+      "mangledName": "$s6health17SwiftHealthPluginC",
+      "moduleName": "health",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

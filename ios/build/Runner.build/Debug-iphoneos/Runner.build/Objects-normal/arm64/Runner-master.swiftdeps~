@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "a9320a3b32de38ed4ebfa85532220e106f1c84a16a482dd39351db3c0755fc4a"
+build_start_time: [1666007028, 816987037]
+build_end_time: [1666007035, 784057140]
+inputs:
+  "/Users/IHL/IHL/IHLCARE/IHLCareNew/ios/Runner/AppDelegate.swift": [1654066327, 276220798]

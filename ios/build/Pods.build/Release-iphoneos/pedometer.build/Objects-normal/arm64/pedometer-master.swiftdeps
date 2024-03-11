@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "2065c2837474bc9e96ade6564bdac032f038d451299279167d27e31eaefee22f"
+build_start_time: [1669706692, 100968837]
+build_end_time: [1669706695, 279288053]
+inputs:
+  ? "/Applications/flutter/flutter/.pub-cache/git/flutter-plugins-637b3b6be8bd5b1ea28fb15656be4b2da16a11e2/packages/pedometer/ios/Classes/SwiftPedometerPlugin.swift"
+  : [1665989085, 156140327]

@@ -1,0 +1,3315 @@
+import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/models/survey.dart';
+import 'package:ihl/painters/backgroundPanter.dart';
+import 'package:ihl/utils/SpUtil.dart';
+import 'package:ihl/utils/app_colors.dart';
+import 'package:ihl/utils/commonUi.dart';
+import 'package:ihl/views/signup/proceed.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+List<IconData> _icons = [
+  FontAwesomeIcons.heartbeat,
+  FontAwesomeIcons.tint,
+  FontAwesomeIcons.handHoldingHeart,
+  FontAwesomeIcons.weight,
+  FontAwesomeIcons.child,
+  FontAwesomeIcons.diagnoses,
+  FontAwesomeIcons.tachometerAlt,
+  FontAwesomeIcons.heartbeat,
+  FontAwesomeIcons.running,
+  FontAwesomeIcons.wineBottle,
+  FontAwesomeIcons.smoking,
+  FontAwesomeIcons.brain,
+  FontAwesomeIcons.pizzaSlice,
+  FontAwesomeIcons.carrot,
+  FontAwesomeIcons.appleAlt,
+  FontAwesomeIcons.coffee,
+  FontAwesomeIcons.utensils,
+  FontAwesomeIcons.handHoldingHeart,
+  FontAwesomeIcons.houseUser,
+  FontAwesomeIcons.dna,
+  FontAwesomeIcons.mapMarkerAlt
+];
+
+List<String> chipList = ['Don\'t know', 'Yes', 'No'];
+int qindex = 0;
+var data = '';
+List qid = [];
+List questionList = [];
+List option = [];
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  http.Client _client = http.Client(); //3gb
+  final iHLUrl = API.iHLUrl+'';
+  final ihlToken =
+      'hZH2vKcf1BPjROFM/DY0XAt89wo/09DXqsAzoCQC5QHYpXttcd5DNPOkFuhrPWcyT57DFFR9MnAdRAXoVw1j5yupkl+ps7+Z1UoM6uOrTxUBAA==';
+  bool answered = false;
+  double _value = 0;
+  String selectedChoice = "";
+  bool isSelected = false;
+  int questionIndex;
+  int get numberOfQuestions => questionList.length;
+
+  void _initSp() async {
+    await SpUtil.getInstance();
+  }
+
+  loadJson() async {
+    String surveyjson = await rootBundle.loadString('assets/survey.json');
+    final survey = surveyFromJson(surveyjson);
+    print(survey[0].option[0]['status']);
+    print(survey[0].option.length);
+    for (var i = 0; i < survey[0].option.length; i++) {
+      chipList.add(survey[0].option[i]['status']);
+    }
+    for (var i = 0; i < 20; i++) {
+      qid.add(survey[i].qId);
+    }
+    for (var i = 0; i < 20; i++) {
+      questionList.add(survey[i].name);
+    }
+    setState(() {});
+    print(chipList);
+    print(questionList);
+    print(qid);
+    return survey;
+  }
+
+  onAnswered(String qId, String answer) async {
+    final prefs = await SharedPreferences.getInstance();
+    var userData = prefs.get('data');
+    String apikey = prefs.get('auth_token');
+    var decodedResponse = jsonDecode(userData);
+    String iHLUserToken = decodedResponse['Token'];
+    String iHLUserId = decodedResponse['User']['id'];
+    final submitAnswerAPI = await _client.post(
+      iHLUrl + '/login/submit_answers?id=' + iHLUserId,
+      headers: {
+        'Content-Type': 'application/json',
+        'Token': 'bearer ' + iHLUserToken,
+        'ApiToken': apikey
+      },
+      body: jsonEncode(<String, String>{qId: answer}),
+    );
+    if (submitAnswerAPI.statusCode == 200) {
+      print(submitAnswerAPI.body);
+      if (submitAnswerAPI.body == null) {
+        throw Exception('Request body is not properly encoded');
+      } else {
+        print("Answer is submitted successfully");
+        print(submitAnswerAPI.body);
+      }
+    }
+  }
+
+  void onNextButtonPressed(String qId, String ans) async {
+    final ansSubmit = onAnswered(qId, ans);
+    if (qindex < numberOfQuestions - 1) {
+      setState(() {
+        qindex++;
+      });
+    } else {
+      /*Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => WaitingScreen(),
+        ),
+      );*/
+    }
+  }
+
+  void onBackButtonPressed() {
+    if (qindex > 0) {
+      setState(() {
+        qindex--;
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initSp();
+    loadJson();
+    //getData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var ht = MediaQuery.of(context).size.height;
+    return SafeArea(
+      top: true,
+      child: Scaffold(
+          body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            CustomPaint(
+              painter: BackgroundPainter(
+                primary: AppColors.primaryColor.withOpacity(0.7),
+                secondary: AppColors.primaryColor,
+              ),
+              child: Container(),
+            ),
+            Center(
+                child: Container(
+                    //margin: EdgeInsets.only(top: 20),
+                    height: 120,
+                    child: Column(children: <Widget>[
+                      Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 300),
+                            child: IconButton(
+                                icon: Icon(Icons.clear, color: Colors.white),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (_) => SignupProcced(),
+                                  ));
+                                }),
+                          ),
+                          Container(
+                              margin: const EdgeInsets.only(top: 30, left: 120),
+                              child: Text(
+                                "Health\nQuestionnarie",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              )),
+                        ],
+                      )
+                    ]))),
+            Center(
+              child: Container(
+                //height: 460,
+                //width: 290,
+                margin: new EdgeInsets.only(top: ht / 6),
+                child: Column(
+                  children: <Widget>[
+                    Center(
+                        child: Container(
+                      margin: const EdgeInsets.only(bottom: 5, right: 240),
+                      child: RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: (qindex + 1).toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 24)),
+                          TextSpan(
+                              text: '/20',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 14))
+                        ]),
+                      ),
+                    )),
+                    Divider(
+                      thickness: 1,
+                      color: Colors.black12,
+                      indent: 20,
+                      endIndent: 250,
+                    ),
+                    Card(
+                      margin: const EdgeInsets.only(top: 30),
+                      //elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.only(
+                              topLeft: const Radius.circular(50),
+                              topRight: const Radius.circular(50),
+                              bottomLeft: const Radius.circular(50),
+                              bottomRight: const Radius.circular(50))),
+                      color: CardColors.bgColor,
+                      child: Container(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(top: 50),
+                          height: 320,
+                          //width: 220,
+                          child: ListView(
+                            padding: EdgeInsets.zero,
+                            children: <Widget>[
+                              Container(
+                                margin: const EdgeInsets.only(bottom: 5),
+                                child: Column(
+                                  children: [
+                                    Center(
+                                        child: Icon(
+                                      _icons[qindex],
+                                      color: Color(0xFF19a9e5),
+                                    )),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                        top: 8.0,
+                                      ),
+                                      child: questionList.isEmpty
+                                          ? CircularProgressIndicator()
+                                          : Text(
+                                              questionList[qindex],
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 18),
+                                            ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Divider(
+                                thickness: 1,
+                                color: Colors.black12,
+                                indent: 50,
+                                endIndent: 50,
+                              ),
+                              SizedBox(height: 40),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(chipList[_value.toInt()],
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 26),
+                                        textAlign: TextAlign.center),
+                                    SizedBox(height: 40),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        //Text(chipList[0], softWrap: true),
+                                        Expanded(
+                                          child: Slider(
+                                            //autofocus: true,
+                                            value: _value,
+                                            label: chipList[_value.toInt()],
+                                            min: 0.0,
+                                            max: 2.0,
+                                            divisions: 2,
+                                            onChangeStart: (double value) {
+                                              print('Start value is ' +
+                                                  chipList[_value.toInt()]);
+                                            },
+                                            onChangeEnd: (double value) {
+                                              print('Finish value is ' +
+                                                  chipList[_value.toInt()]);
+                                            },
+                                            onChanged: (double value) {
+                                              setState(() {
+                                                _value = value;
+                                                answered = true;
+                                                print('Selected value is ' +
+                                                    chipList[_value.toInt()]);
+                                              });
+                                            },
+                                            activeColor:
+                                                Color(0xFF19a9e5),
+                                            inactiveColor: Colors.grey,
+                                          ),
+                                        ),
+                                        //Text(chipList[2], softWrap: true),
+                                      ],
+                                    ),
+                                    SizedBox(height: 40),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Container(
+                          margin: const EdgeInsets.only(left: 10, top: 5),
+                          child: ElevatedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.grey)),
+                            onPressed: () {
+                              onBackButtonPressed();
+                            },
+                            color: Colors.grey,
+                            textColor: Colors.white,
+                            child: Text("Back".toUpperCase(),
+                                style: TextStyle(fontSize: 14)),
+                          ),
+                        ),
+                        Spacer(flex: 1),
+                        Container(
+                          margin: const EdgeInsets.only(top: 5, right: 10),
+                          child: ElevatedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color(0xFF19a9e5))),
+                            onPressed: () {
+                              setState(() {
+                                qindex == 19 ? qindex = 19 : qindex += 1;
+                              });
+                            },
+                            color: Color(0xFF19a9e5),
+                            textColor: Colors.white,
+                            child: Text("Next".toUpperCase(),
+                                style: TextStyle(fontSize: 14)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/models/survey.dart';
+import 'package:ihl/painters/backgroundPanter.dart';
+import 'package:ihl/utils/SpUtil.dart';
+import 'package:ihl/utils/app_colors.dart';
+import 'package:ihl/utils/commonUi.dart';
+import 'package:ihl/views/signup/proceed.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:ihl/models/surveyQuestion.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+/// TODO:
+/// Getting user details after registration
+/// On last Question change 'Next' in button to 'Continue'
+/// API Check
+/// Store last attempted qus in prefs
+
+List<IconData> _icons = [
+  FontAwesomeIcons.heartbeat,
+  FontAwesomeIcons.tint,
+  FontAwesomeIcons.handHoldingHeart,
+  FontAwesomeIcons.weight,
+  FontAwesomeIcons.child,
+  FontAwesomeIcons.diagnoses,
+  FontAwesomeIcons.tachometerAlt,
+  FontAwesomeIcons.heartbeat,
+  FontAwesomeIcons.running,
+  FontAwesomeIcons.wineBottle,
+  FontAwesomeIcons.smoking,
+  FontAwesomeIcons.brain,
+  FontAwesomeIcons.pizzaSlice,
+  FontAwesomeIcons.carrot,
+  FontAwesomeIcons.appleAlt,
+  FontAwesomeIcons.coffee,
+  FontAwesomeIcons.utensils,
+  FontAwesomeIcons.handHoldingHeart,
+  FontAwesomeIcons.houseUser,
+  FontAwesomeIcons.dna,
+  FontAwesomeIcons.mapMarkerAlt
+];
+
+int qindex = 0;
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  final iHLUrl = API.iHLUrl+'';
+  final ihlToken =
+      'hZH2vKcf1BPjROFM/DY0XAt89wo/09DXqsAzoCQC5QHYpXttcd5DNPOkFuhrPWcyT57DFFR9MnAdRAXoVw1j5yupkl+ps7+Z1UoM6uOrTxUBAA==';
+  bool answered = false;
+  bool loading = true;
+  double _value = 0;
+  String selectedChoice = "";
+  bool isSelected = false;
+  int questionIndex;
+  List<SurveyQuestion> _surveyQuestion = [];
+
+  void _initSp() async {
+    await SpUtil.getInstance();
+  }
+
+  getQuestion() async {
+    String surveyjson = await rootBundle.loadString('assets/survey.json');
+    List ok = jsonDecode(surveyjson);
+    ok = ok;
+    _surveyQuestion = [];
+
+    ok.forEach((element) {
+      _surveyQuestion.add(SurveyQuestion(element));
+    });
+    loading = false;
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initSp();
+    getQuestion();
+    //getData();
+  }
+
+  void onAnswered(String qId, String answer) async {
+    final prefs = await SharedPreferences.getInstance();
+    var userData = prefs.get('data');
+    String apikey = prefs.get('auth_token');
+    var decodedResponse = jsonDecode(userData);
+    String iHLUserToken = decodedResponse['Token'];
+    String iHLUserId = decodedResponse['User']['id'];
+    final submitAnswerAPI = await _client.post(
+      iHLUrl + '/login/submit_answers?id=' + iHLUserId,
+      headers: {
+        'Content-Type': 'application/json',
+        'Token': 'bearer ' + iHLUserToken,
+        'ApiToken': apikey
+      },
+      body: jsonEncode(<String, String>{qId: answer}),
+    );
+    if (submitAnswerAPI.statusCode == 200) {
+      print(submitAnswerAPI.body);
+      if (submitAnswerAPI.body == null) {
+        throw Exception('Request body is not properly encoded');
+      } else {
+        print("Answer is submitted successfully");
+        print(submitAnswerAPI.body);
+      }
+    }
+  }
+
+  void onBackButtonPressed() {
+    if (qindex > 0) {
+      setState(() {
+        qindex--;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (loading) {
+      Dialog(
+        child: Container(
+          height: 100,
+          child: Center(
+            child: new Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                new CircularProgressIndicator(),
+                SizedBox(
+                  width: 10,
+                ),
+                new Text("Loading... Please wait"),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+    var ht = MediaQuery.of(context).size.height;
+    return SafeArea(
+      top: true,
+      child: Scaffold(
+          body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            CustomPaint(
+              painter: BackgroundPainter(
+                primary: AppColors.primaryColor.withOpacity(0.7),
+                secondary: AppColors.primaryColor,
+              ),
+              child: Container(),
+            ),
+            Center(
+                child: Container(
+                    //margin: EdgeInsets.only(top: 20),
+                    height: 120,
+                    child: Column(children: <Widget>[
+                      Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 300),
+                            child: 
+                            IconButton(
+                                icon: Icon(Icons.clear, color: Colors.white),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (_) => SignupProcced(),
+                                  ));
+                                }),
+                          ),
+                          Container(
+                              margin: const EdgeInsets.only(top: 30, left: 120),
+                              child: Text(
+                                "Health\nQuestionnarie",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              )),
+                        ],
+                      )
+                    ]))),
+            Center(
+              child: Container(
+                //height: 460,
+                //width: 290,
+                margin: new EdgeInsets.only(top: ht / 6),
+                child: Column(
+                  children: <Widget>[
+                    Center(
+                        child: Container(
+                      margin: const EdgeInsets.only(bottom: 5, right: 240),
+                      child: RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: (qindex + 1).toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 24)),
+                          TextSpan(
+                              text: '/20',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 14))
+                        ]),
+                      ),
+                    )),
+                    Divider(
+                      thickness: 1,
+                      color: Colors.black12,
+                      indent: 20,
+                      endIndent: 250,
+                    ),
+                    Card(
+                      margin: const EdgeInsets.only(top: 30),
+                      //elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.only(
+                              topLeft: const Radius.circular(50),
+                              topRight: const Radius.circular(50),
+                              bottomLeft: const Radius.circular(50),
+                              bottomRight: const Radius.circular(50))),
+                      color: CardColors.bgColor,
+                      child: Container(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(top: 50),
+                          height: 320,
+                          //width: 220,
+                          child: ListView(
+                            padding: EdgeInsets.zero,
+                            children: <Widget>[
+                              Container(
+                                margin: const EdgeInsets.only(bottom: 5),
+                                child: Column(
+                                  children: [
+                                    Center(
+                                        child: Icon(
+                                      _icons[qindex],
+                                      color: Color(0xFF19a9e5),
+                                    )),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 8.0, left: 8, right: 8),
+                                      child: _surveyQuestion == null ||
+                                              _surveyQuestion.isEmpty
+                                          ? CircularProgressIndicator()
+                                          : Text(
+                                              _surveyQuestion[qindex].question,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 18),
+                                            ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Divider(
+                                thickness: 1,
+                                color: Colors.black12,
+                                indent: 50,
+                                endIndent: 50,
+                              ),
+                              SizedBox(height: 40),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(
+                                        _surveyQuestion[qindex]
+                                            .options[_value.toInt()]
+                                            .mainAnswer
+                                            .status,
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 26),
+                                        textAlign: TextAlign.center),
+                                    SizedBox(height: 40),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        //Text(chipList[0], softWrap: true),
+                                        Expanded(
+                                          child: Slider(
+                                            //autofocus: true,
+                                            value: _value,
+                                            label: _surveyQuestion[qindex]
+                                                .options[_value.toInt()]
+                                                .mainAnswer
+                                                .status,
+                                            min: 0,
+                                            max: _surveyQuestion[qindex]
+                                                    .options
+                                                    .length
+                                                    .toDouble() -
+                                                1,
+                                            divisions: 2,
+                                            onChangeStart: (double value) {
+                                              print('Start value is ' +
+                                                  _surveyQuestion[qindex]
+                                                      .options[_value.toInt()]
+                                                      .mainAnswer
+                                                      .status);
+                                            },
+                                            onChangeEnd: (double value) {
+                                              print('Finish value is ' +
+                                                  _surveyQuestion[qindex]
+                                                      .options[_value.toInt()]
+                                                      .mainAnswer
+                                                      .status);
+                                            },
+                                            onChanged: (double value) {
+                                              setState(() {
+                                                _value = value;
+                                                answered = true;
+                                                print('Selected value is ' +
+                                                    _surveyQuestion[qindex]
+                                                        .options[_value.toInt()]
+                                                        .mainAnswer
+                                                        .status);
+                                              });
+                                            },
+                                            activeColor:
+                                                Color(0xFF19a9e5),
+                                            inactiveColor: Colors.grey,
+                                          ),
+                                        ),
+                                        //Text(chipList[2], softWrap: true),
+                                      ],
+                                    ),
+                                    SizedBox(height: 40),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Container(
+                          margin: const EdgeInsets.only(left: 10, top: 5),
+                          child: ElevatedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.grey)),
+                            onPressed: () {
+                              setState(() {
+                                _value = 0;
+
+                                qindex == 0 ? qindex = 0 : qindex -= 1;
+                              });
+                            },
+                            color: Colors.grey,
+                            textColor: Colors.white,
+                            child: Text("Back".toUpperCase(),
+                                style: TextStyle(fontSize: 14)),
+                          ),
+                        ),
+                        Spacer(flex: 1),
+                        Container(
+                          margin: const EdgeInsets.only(top: 5, right: 10),
+                          child: ElevatedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color(0xFF19a9e5))),
+                            onPressed: () {
+                              //Main question
+                              setState(() {
+                                onAnswered(
+                                    _surveyQuestion[qindex].qid,
+                                    _surveyQuestion[qindex]
+                                        .options[_value.toInt()]
+                                        .mainAnswer
+                                        .status);
+
+                                ///Will throw error since user token is not obtained from user login
+                              });
+                              //Follow up question
+                              setState(() {
+                                _surveyQuestion[qindex]
+                                    .selectFromIndex(_value.toInt(), context)
+                                    .then((val) {
+                                  if (val != null) {
+                                    print(val.qid);
+                                    print(val.answer.mainAnswer.value);
+                                    onAnswered(
+                                        val.qid, val.answer.mainAnswer.value);
+                                  }
+                                });
+                                new Future.delayed(new Duration(seconds: 5));
+                                qindex == 19 ? qindex = 19 : qindex += 1;
+                                _value = 0;
+                              });
+                            },
+                            color: Color(0xFF19a9e5),
+                            textColor: Colors.white,
+                            child: Text("Next".toUpperCase(),
+                                style: TextStyle(fontSize: 14)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/models/survey.dart';
+
+const _emojis = ['NO', 'DON\'T KNOW', 'YES'];
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  bool answered = false;
+  double _value = 0;
+  int _selectedIndex;
+
+  String selectedChoice = "";
+  bool isSelected = false;
+
+  List<String> chipList = List<String>();
+
+  loadJson() async {
+    String surveyjson = await rootBundle.loadString('assets/survey.json');
+    final survey = surveyFromJson(surveyjson);
+    print(survey[0].option[0]['status']);
+    print(survey[0].option.length);
+    for (var i = 0; i < survey[0].option.length; i++) {
+      chipList.add(survey[0].option[i]['status']);
+    }
+    print(chipList);
+  }
+
+  _buildChoiceList() {
+    List<Widget> choices = List();
+    chipList.forEach((item) {
+      choices.add(Container(
+        padding: const EdgeInsets.all(2.0),
+        child: ChoiceChip(
+          label: Text(item),
+          labelStyle: TextStyle(
+              color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+          ),
+          backgroundColor: Color(0xffededed),
+          selectedColor: Color(0xFF19a9e5),
+          selected: selectedChoice == item,
+          onSelected: (selected) {
+            setState(() {
+              isSelected = true;
+              selectedChoice = item;
+            });
+          },
+        ),
+      ));
+    });
+    return choices;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await loadJson();
+    });
+  }
+
+  Widget chip(BuildContext context) {
+    return Column(
+      verticalDirection: VerticalDirection.down,
+      children: _buildChoiceList(),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var ht = MediaQuery.of(context).size.height;
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Stack(
+        children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height,
+              color: Colors.grey[200],
+              child: ListView(children: [
+                Container(
+                  height: (MediaQuery.of(context).size.height) / 2.8,
+                  decoration: BoxDecoration(
+                      color: Color(0xFF19a9e5),
+                      borderRadius: new BorderRadius.only(
+                          bottomLeft: const Radius.circular(40),
+                          bottomRight: const Radius.circular(40))),
+                )
+              ])),
+          Center(
+              child: Container(
+                  margin: EdgeInsets.only(top: 40),
+                  height: 120,
+                  child: Column(
+                    children: <Widget>[
+                      /*Image.asset(
+                        "assets/images/headIcon2.png",
+                        height: 90,
+                      ),*/
+                      Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Health\nQuestionnarie",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ))
+                    ],
+                  ))),
+          Center(
+            child: Container(
+              height: 460,
+              width: 290,
+              margin: new EdgeInsets.only(top: ht / 4),
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 3.0),
+                        blurRadius: 7.0)
+                  ],
+                  color: Colors.white,
+                  borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(100),
+                      topRight: const Radius.circular(5),
+                      bottomLeft: const Radius.circular(10),
+                      bottomRight: const Radius.circular(5))),
+              child: Column(
+                children: <Widget>[
+                  Center(
+                      child: Container(
+                    margin: const EdgeInsets.only(bottom: 15, top: 15),
+                    child: RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: "01",
+                            style: TextStyle(
+                                color: Color(0xFF19a9e5),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18)),
+                        TextSpan(
+                            text: '/15',
+                            style: TextStyle(color: Colors.black, fontSize: 14))
+                      ]),
+                    ),
+                  )),
+                  Divider(
+                    thickness: 2,
+                    color: Colors.black12,
+                    indent: 50,
+                    endIndent: 25,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Container(
+                        height: 320,
+                        width: 260,
+                        margin: new EdgeInsets.only(top: 15),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1.5,
+                              color: Color(0xFF19a9e5),
+                            ),
+                            color: Colors.white,
+                            borderRadius: new BorderRadius.only(
+                                topLeft: const Radius.circular(70),
+                                topRight: const Radius.circular(5),
+                                bottomLeft: const Radius.circular(10),
+                                bottomRight: const Radius.circular(5))),
+                        child: Container(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            alignment: Alignment.center,
+                            margin: const EdgeInsets.only(top: 20),
+                            height: 340,
+                            width: 220,
+                            child: ListView(
+                              padding: EdgeInsets.zero,
+                              children: <Widget>[
+                                Container(
+                                  margin: const EdgeInsets.only(bottom: 5),
+                                  child: Column(
+                                    children: [
+                                      Center(
+                                          child: Image.network(
+                                              'https://cdn2.iconfinder.com/data/icons/medicine-46/64/Medical-105-512.png',
+                                              height: 40)),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 35),
+                                        child: Text(
+                                          'Do you have Heart related problems?',
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 18),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Divider(
+                                  thickness: 2,
+                                  color: Colors.black12,
+                                  indent: 10,
+                                  endIndent: 10,
+                                ),
+                                SizedBox(height: 20),
+                                Container(
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      chip(context),
+
+                                      /*Text(_emojis[_value.toInt()],
+                                          textAlign: TextAlign.center),
+                                      SizedBox(height: 10),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(_emojis[0], softWrap: true),
+                                          Expanded(
+                                            child: Slider(
+                                              autofocus: true,
+                                              value: _value,
+                                              label: _emojis[_value.toInt()],
+                                              min: 0.0,
+                                              max: 2.0,
+                                              divisions: 2,
+                                              onChangeStart: (double value) {
+                                                print('Start value is ' +
+                                                    _emojis[_value.toInt()]);
+                                              },
+                                              onChangeEnd: (double value) {
+                                                print('Finish value is ' +
+                                                    _emojis[_value.toInt()]);
+                                              },
+                                              onChanged: (double value) {
+                                                setState(() {
+                                                  _value = value;
+                                                  answered = true;
+                                                  print('Selected value is ' +
+                                                      _emojis[_value.toInt()]);
+                                                });
+                                              },
+                                              activeColor: Color.fromRGBO(
+                                                  67, 147, 207, 1),
+                                              inactiveColor: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(_emojis[2], softWrap: true),
+                                        ],
+                                      ),
+                                      SizedBox(height: 40),*/
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Spacer(flex: 1),
+                      /*RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: "   Score :  ",
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 20)),
+                          TextSpan(
+                              text:'20',
+                              style: TextStyle(
+                                  color: Colors.blueGrey, fontSize: 20))
+                        ]),
+                      ),*/
+                      Spacer(flex: 1),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_forward,
+                              color: answered
+                                  ? Color(0xFF19a9e5)
+                                  : Colors.grey),
+                          onPressed: () {
+                            if (answered) {
+                              setState(() {
+                                answered = false;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    ));
+  }
+}
+
+
+/*
+import 'package:flutter/material.dart';
+import 'dart:async';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/models/survey.dart';
+
+const chipList1 = ['Don\'t Know', 'Yes', 'No'];
+const chipList2 = ['Don\'t Know', 'No', 'Yes'];
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  bool answered1 = true;
+  bool answered2 = false;
+  double _value = 0;
+  int _selectedIndex;
+  List<String> chipList = List<String>();
+  List<String> questionList = List<String>();
+
+  loadJson() async {
+    String surveyjson = await rootBundle.loadString('assets/survey.json');
+    final survey = surveyFromJson(surveyjson);
+    print(survey[0].option[0]['status']);
+    print(survey[0].option.length);
+    for (var i = 0; i < survey[0].option.length; i++) {
+      chipList.add(survey[0].option[i]['status']);
+    }
+    for (var i = 0; i < 20; i++) {
+      questionList.add(survey[i].name);
+    }
+    print(chipList);
+    print(questionList);
+    return survey;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadJson();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var ht = MediaQuery.of(context).size.height;
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Stack(
+        children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height,
+              color: Colors.grey[200],
+              child: ListView(children: [
+                Container(
+                  height: (MediaQuery.of(context).size.height) / 2.8,
+                  decoration: BoxDecoration(
+                      color: Color(0xFF19a9e5),
+                      borderRadius: new BorderRadius.only(
+                          bottomLeft: const Radius.circular(40),
+                          bottomRight: const Radius.circular(40))),
+                )
+              ])),
+          Center(
+              child: Container(
+                  margin: EdgeInsets.only(top: 40),
+                  height: 120,
+                  child: Column(
+                    children: <Widget>[
+                      /*Image.asset(
+                        "assets/images/headIcon2.png",
+                        height: 90,
+                      ),*/
+                      Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Health\nQuestionnarie",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ))
+                    ],
+                  ))),
+          Center(
+            child: Container(
+              height: 460,
+              width: 290,
+              margin: new EdgeInsets.only(top: ht / 4),
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 3.0),
+                        blurRadius: 7.0)
+                  ],
+                  color: Colors.white,
+                  borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(100),
+                      topRight: const Radius.circular(5),
+                      bottomLeft: const Radius.circular(10),
+                      bottomRight: const Radius.circular(5))),
+              child: Column(
+                children: <Widget>[
+                  Center(
+                      child: Container(
+                    margin: const EdgeInsets.only(bottom: 15, top: 15),
+                    child: RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: answered1 == true ? "01" : "02",
+                            style: TextStyle(
+                                color: Color(0xFF19a9e5),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18)),
+                        TextSpan(
+                            text: '/15',
+                            style: TextStyle(color: Colors.black, fontSize: 14))
+                      ]),
+                    ),
+                  )),
+                  Divider(
+                    thickness: 2,
+                    color: Colors.black12,
+                    indent: 50,
+                    endIndent: 25,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Container(
+                        height: 320,
+                        width: 260,
+                        margin: new EdgeInsets.only(top: 15),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1.5,
+                              color: Color(0xFF19a9e5),
+                            ),
+                            color: Colors.white,
+                            borderRadius: new BorderRadius.only(
+                                topLeft: const Radius.circular(70),
+                                topRight: const Radius.circular(5),
+                                bottomLeft: const Radius.circular(10),
+                                bottomRight: const Radius.circular(5))),
+                        child: Container(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            alignment: Alignment.center,
+                            margin: const EdgeInsets.only(top: 20),
+                            height: 340,
+                            width: 220,
+                            child: ListView(
+                              padding: EdgeInsets.zero,
+                              children: <Widget>[
+                                Container(
+                                  margin: const EdgeInsets.only(bottom: 5),
+                                  child: Column(
+                                    children: [
+                                      Center(
+                                          child: Image.network(
+                                              answered1 == true
+                                                  ? 'https://cdn2.iconfinder.com/data/icons/medicine-46/64/Medical-105-512.png'
+                                                  : 'https://www.clipartmax.com/png/middle/295-2957007_diabetes-and-periodontal-disease-links-diabetes-icon.png',
+                                              height: 40)),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10),
+                                        child: Text(
+                                          answered1 == true
+                                              ? 'Do you have Heart related problems?'
+                                              : 'Do you have Diabetes?',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 18),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Divider(
+                                  thickness: 2,
+                                  color: Colors.black12,
+                                  indent: 10,
+                                  endIndent: 10,
+                                ),
+                                SizedBox(height: 20),
+                                Container(
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      ChoiceChipWidget(answered1 == true
+                                          ? chipList1
+                                          : chipList2),
+
+                                      /*Text(_emojis[_value.toInt()],
+                                          textAlign: TextAlign.center),
+                                      SizedBox(height: 10),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(_emojis[0], softWrap: true),
+                                          Expanded(
+                                            child: Slider(
+                                              autofocus: true,
+                                              value: _value,
+                                              label: _emojis[_value.toInt()],
+                                              min: 0.0,
+                                              max: 2.0,
+                                              divisions: 2,
+                                              onChangeStart: (double value) {
+                                                print('Start value is ' +
+                                                    _emojis[_value.toInt()]);
+                                              },
+                                              onChangeEnd: (double value) {
+                                                print('Finish value is ' +
+                                                    _emojis[_value.toInt()]);
+                                              },
+                                              onChanged: (double value) {
+                                                setState(() {
+                                                  _value = value;
+                                                  answered = true;
+                                                  print('Selected value is ' +
+                                                      _emojis[_value.toInt()]);
+                                                });
+                                              },
+                                              activeColor: Color.fromRGBO(
+                                                  67, 147, 207, 1),
+                                              inactiveColor: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(_emojis[2], softWrap: true),
+                                        ],
+                                      ),
+                                      SizedBox(height: 40),*/
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        margin: const EdgeInsets.only(right: 20, top: 5),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_back,
+                              color: answered2
+                                  ? Color(0xFF19a9e5)
+                                  : Colors.grey),
+                          onPressed: () {
+                            if (answered2) {
+                              setState(() {
+                                loadJson();
+                                answered2 = false;
+                                answered1 = true;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                      /*RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: "   Score :  ",
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 20)),
+                          TextSpan(
+                              text:'20',
+                              style: TextStyle(
+                                  color: Colors.blueGrey, fontSize: 20))
+                        ]),
+                      ),*/
+                      Spacer(flex: 1),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_forward,
+                              color: answered1
+                                  ? Color(0xFF19a9e5)
+                                  : Colors.grey),
+                          onPressed: () {
+                            if (answered1) {
+                              setState(() {
+                                loadJson();
+                                answered1 = false;
+                                answered2 = true;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    ));
+  }
+}
+
+class ChoiceChipWidget extends StatefulWidget {
+  final List<String> reportList;
+
+  ChoiceChipWidget(this.reportList);
+
+  @override
+  _ChoiceChipWidgetState createState() => new _ChoiceChipWidgetState();
+}
+
+class _ChoiceChipWidgetState extends State<ChoiceChipWidget> {
+  String selectedChoice = "";
+  bool isSelected = false;
+
+  _buildChoiceList() {
+    List<Widget> choices = List();
+    widget.reportList.forEach((item) {
+      choices.add(Container(
+        padding: const EdgeInsets.all(2.0),
+        child: ChoiceChip(
+          label: Text(item),
+          labelStyle: TextStyle(
+              color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+          ),
+          backgroundColor: Color(0xffededed),
+          selectedColor: Color(0xFF19a9e5),
+          selected: selectedChoice == item,
+          onSelected: (selected) {
+            setState(() {
+              isSelected = true;
+              selectedChoice = item;
+            });
+          },
+        ),
+      ));
+    });
+    return choices;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      verticalDirection: VerticalDirection.down,
+      children: _buildChoiceList(),
+    );
+  }
+}
+
+*/
+
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(SurveyUi()); 
+
+List<String> chiList = List<String>();
+List<String> chipList = ['Hi', 'Hello','How'];
+
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  bool answered = false;
+  double _value = 0;
+
+
+  String selectedChoice = "";
+  bool isSelected = false;
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    var ht = MediaQuery.of(context).size.height;
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Stack(
+        children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height,
+              color: Colors.grey[200],
+              child: ListView(children: [
+                Container(
+                  height: (MediaQuery.of(context).size.height) / 2.8,
+                  decoration: BoxDecoration(
+                      color: Color(0xFF19a9e5),
+                      borderRadius: new BorderRadius.only(
+                          bottomLeft: const Radius.circular(40),
+                          bottomRight: const Radius.circular(40))),
+                )
+              ])),
+          Center(
+              child: Container(
+                  margin: EdgeInsets.only(top: 40),
+                  height: 120,
+                  child: Column(
+                    children: <Widget>[
+                      /*Image.asset(
+                        "assets/images/headIcon2.png",
+                        height: 90,
+                      ),*/
+                      Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Health\nQuestionnarie",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ))
+                    ],
+                  ))),
+          Center(
+            child: Container(
+              height: 460,
+              width: 290,
+              margin: new EdgeInsets.only(top: ht / 4),
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 3.0),
+                        blurRadius: 7.0)
+                  ],
+                  color: Colors.white,
+                  borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(100),
+                      topRight: const Radius.circular(5),
+                      bottomLeft: const Radius.circular(10),
+                      bottomRight: const Radius.circular(5))),
+              child: Column(
+                children: <Widget>[
+                  Center(
+                      child: Container(
+                    margin: const EdgeInsets.only(bottom: 15, top: 15),
+                    child: RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: "01",
+                            style: TextStyle(
+                                color: Color(0xFF19a9e5),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18)),
+                        TextSpan(
+                            text: '/15',
+                            style: TextStyle(color: Colors.black, fontSize: 14))
+                      ]),
+                    ),
+                  )),
+                  Divider(
+                    thickness: 2,
+                    color: Colors.black12,
+                    indent: 50,
+                    endIndent: 25,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Container(
+                        height: 320,
+                        width: 260,
+                        margin: new EdgeInsets.only(top: 15),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1.5,
+                              color: Color(0xFF19a9e5),
+                            ),
+                            color: Colors.white,
+                            borderRadius: new BorderRadius.only(
+                                topLeft: const Radius.circular(70),
+                                topRight: const Radius.circular(5),
+                                bottomLeft: const Radius.circular(10),
+                                bottomRight: const Radius.circular(5))),
+                        child: Container(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            alignment: Alignment.center,
+                            margin: const EdgeInsets.only(top: 20),
+                            height: 340,
+                            width: 220,
+                            child: ListView(
+                              padding: EdgeInsets.zero,
+                              children: <Widget>[
+                                Container(
+                                  margin: const EdgeInsets.only(bottom: 5),
+                                  child: Column(
+                                    children: [
+                                      Center(
+                                          child: Image.network(
+                                              'https://cdn2.iconfinder.com/data/icons/medicine-46/64/Medical-105-512.png',
+                                              height: 40)),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 15),
+                                        child: Text(
+                                          'Do you have Heart related problems?',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 18),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Divider(
+                                  thickness: 2,
+                                  color: Colors.black12,
+                                  indent: 10,
+                                  endIndent: 10,
+                                ),
+                                SizedBox(height: 20),
+                                Container(
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                   
+
+                                      Text(chipList[_value.toInt()],
+                                          textAlign: TextAlign.center),
+                                      SizedBox(height: 10),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          //Text(chipList[0], softWrap: true),
+                                          Expanded(
+                                            child: Slider(
+                                              autofocus: true,
+                                              value: _value,
+                                              label: chipList[_value.toInt()],
+                                              min: 0.0,
+                                              max: 2.0,
+                                              divisions: 2,
+                                              onChangeStart: (double value) {
+                                                print('Start value is ' +
+                                                    chipList[_value.toInt()]);
+                                              },
+                                              onChangeEnd: (double value) {
+                                                print('Finish value is ' +
+                                                    chipList[_value.toInt()]);
+                                              },
+                                              onChanged: (double value) {
+                                                setState(() {
+                                                  _value = value;
+                                                  answered = true;
+                                                  print('Selected value is ' +
+                                                      chipList[_value.toInt()]);
+                                                });
+                                              },
+                                              activeColor: Color.fromRGBO(
+                                                  67, 147, 207, 1),
+                                              inactiveColor: Colors.grey,
+                                            ),
+                                          ),
+                                          //Text(_emojis[2], softWrap: true),
+                                        ],
+                                      ),
+                                      SizedBox(height: 40),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        margin: const EdgeInsets.only(right: 20, top: 5),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_back,
+                              color: answered
+                                  ? Colors.grey
+                                  : Color(0xFF19a9e5)),
+                          onPressed: () {
+                            if (answered == true) {
+                              setState(() {
+                                answered = false;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                      /*RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: "   Score :  ",
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 20)),
+                          TextSpan(
+                              text:'20',
+                              style: TextStyle(
+                                  color: Colors.blueGrey, fontSize: 20))
+                        ]),
+                      ),*/
+                      Spacer(flex: 1),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_forward,
+                              color: answered
+                                  ? Color(0xFF19a9e5)
+                                  : Colors.grey),
+                          onPressed: () {
+                            if (answered == true) {
+                              setState(() {
+                                answered = false;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    ));
+  }
+}
+
+
+
+
+
+
+
+
+import 'package:flutter/material.dart';
+import 'dart:async';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/models/survey.dart';
+
+List<String> chipList = List<String>();
+List<String> questionList = List<String>();
+
+loadJson() async {
+  String surveyjson = await rootBundle.loadString('assets/survey.json');
+  final survey = surveyFromJson(surveyjson);
+  print(survey[0].option[0]['status']);
+  print(survey[0].option.length);
+  for (var i = 0; i < survey[0].option.length; i++) {
+    chipList.add(survey[0].option[i]['status']);
+  }
+  for (var i = 0; i < 20; i++) {
+    questionList.add(survey[i].name);
+  }
+  print(chipList);
+  print(questionList);
+  return survey;
+}
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  bool answered = false;
+  double _value = 0;
+  int _selectedIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    loadJson();
+  }
+
+  String selectedChoice = "";
+  bool isSelected = false;
+
+
+  @override
+  Widget build(BuildContext context) {
+    var ht = MediaQuery.of(context).size.height;
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Stack(
+        children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height,
+              color: Colors.grey[200],
+              child: ListView(children: [
+                Container(
+                  height: (MediaQuery.of(context).size.height) / 2.8,
+                  decoration: BoxDecoration(
+                      color: Color(0xFF19a9e5),
+                      borderRadius: new BorderRadius.only(
+                          bottomLeft: const Radius.circular(40),
+                          bottomRight: const Radius.circular(40))),
+                )
+              ])),
+          Center(
+              child: Container(
+                  margin: EdgeInsets.only(top: 40),
+                  height: 120,
+                  child: Column(
+                    children: <Widget>[
+                      /*Image.asset(
+                        "assets/images/headIcon2.png",
+                        height: 90,
+                      ),*/
+                      Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Health\nQuestionnarie",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ))
+                    ],
+                  ))),
+          Center(
+            child: Container(
+              height: 460,
+              width: 290,
+              margin: new EdgeInsets.only(top: ht / 4),
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 3.0),
+                        blurRadius: 7.0)
+                  ],
+                  color: Colors.white,
+                  borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(100),
+                      topRight: const Radius.circular(5),
+                      bottomLeft: const Radius.circular(10),
+                      bottomRight: const Radius.circular(5))),
+              child: Column(
+                children: <Widget>[
+                  Center(
+                      child: Container(
+                    margin: const EdgeInsets.only(bottom: 15, top: 15),
+                    child: RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: "01",
+                            style: TextStyle(
+                                color: Color(0xFF19a9e5),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18)),
+                        TextSpan(
+                            text: '/15',
+                            style: TextStyle(color: Colors.black, fontSize: 14))
+                      ]),
+                    ),
+                  )),
+                  Divider(
+                    thickness: 2,
+                    color: Colors.black12,
+                    indent: 50,
+                    endIndent: 25,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Container(
+                        height: 320,
+                        width: 260,
+                        margin: new EdgeInsets.only(top: 15),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1.5,
+                              color: Color(0xFF19a9e5),
+                            ),
+                            color: Colors.white,
+                            borderRadius: new BorderRadius.only(
+                                topLeft: const Radius.circular(70),
+                                topRight: const Radius.circular(5),
+                                bottomLeft: const Radius.circular(10),
+                                bottomRight: const Radius.circular(5))),
+                        child: Container(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            alignment: Alignment.center,
+                            margin: const EdgeInsets.only(top: 20),
+                            height: 340,
+                            width: 220,
+                            child: ListView(
+                              padding: EdgeInsets.zero,
+                              children: <Widget>[
+                                Container(
+                                  margin: const EdgeInsets.only(bottom: 5),
+                                  child: Column(
+                                    children: [
+                                      Center(
+                                          child: Image.network(
+                                              'https://cdn2.iconfinder.com/data/icons/medicine-46/64/Medical-105-512.png',
+                                              height: 40)),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 15),
+                                        child: Text(
+                                          'Do you have Heart related problems?',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 18),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Divider(
+                                  thickness: 2,
+                                  color: Colors.black12,
+                                  indent: 10,
+                                  endIndent: 10,
+                                ),
+                                SizedBox(height: 20),
+                                Container(
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+
+                                  Text(chipList[_value.toInt()],
+                                          textAlign: TextAlign.center),
+                                      SizedBox(height: 10),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(_emojis[0], softWrap: true),
+                                          Expanded(
+                                            child: Slider(
+                                              autofocus: true,
+                                              value: _value,
+                                              label: _emojis[_value.toInt()],
+                                              min: 0.0,
+                                              max: 2.0,
+                                              divisions: 2,
+                                              onChangeStart: (double value) {
+                                                print('Start value is ' +
+                                                    _emojis[_value.toInt()]);
+                                              },
+                                              onChangeEnd: (double value) {
+                                                print('Finish value is ' +
+                                                    _emojis[_value.toInt()]);
+                                              },
+                                              onChanged: (double value) {
+                                                setState(() {
+                                                  _value = value;
+                                                  answered = true;
+                                                  print('Selected value is ' +
+                                                      _emojis[_value.toInt()]);
+                                                });
+                                              },
+                                              activeColor: Color.fromRGBO(
+                                                  67, 147, 207, 1),
+                                              inactiveColor: Colors.grey,
+                                            ),
+                                          ),
+                                          Text(_emojis[2], softWrap: true),
+                                        ],
+                                      ),
+                                      SizedBox(height: 40),*/
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        margin: const EdgeInsets.only(right: 20, top: 5),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_back,
+                              color: answered
+                                  ? Colors.grey
+                                  : Color(0xFF19a9e5)),
+                          onPressed: () {
+                            if (answered == true) {
+                              setState(() {
+                                loadJson();
+                                answered = false;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                      /*RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: "   Score :  ",
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 20)),
+                          TextSpan(
+                              text:'20',
+                              style: TextStyle(
+                                  color: Colors.blueGrey, fontSize: 20))
+                        ]),
+                      ),*/
+                      Spacer(flex: 1),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_forward,
+                              color: answered
+                                  ? Color(0xFF19a9e5)
+                                  : Colors.grey),
+                          onPressed: () {
+                            if (answered == true) {
+                              setState(() {
+                                loadJson();
+                                answered = false;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    ));
+  }
+}
+
+
+
+
+
+import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/models/survey.dart';
+import 'package:ihl/utils/SpUtil.dart';
+import 'package:ihl/views/signup/proceed.dart';
+
+List<String> chipList = List<String>();
+int qindex = 0;
+var data = '';
+List qid = [];
+List questionList = [];
+List option = [];
+
+loadJson() async {
+  var surveyjson = await rootBundle.loadString('assets/survey.json');
+  SpUtil.putString('survey', surveyjson);
+  var survey = surveyFromJson(surveyjson);
+  print(survey[0].option[0]['status']);
+  print(survey[0].option.length);
+  for (var i = 0; i < survey[0].option.length; i++) {
+    chipList.add(survey[0].option[i]['status']);
+  }
+  print(chipList);
+  return survey;
+}
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  bool answered = false;
+  double _value = 0;
+  int _selectedIndex;
+  var qno = 1;
+
+  void _initSp() async {
+    await SpUtil.getInstance();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initSp();
+    loadJson();
+    getData();
+  }
+
+  String selectedChoice = "";
+  bool isSelected = false;
+
+  void getData() {
+    data = SpUtil.getString('survey');
+    var surveydata = jsonDecode(data);
+    for (var i = 0; i < surveydata.length; i++) {
+      questionList.add(surveydata[i]['name']);
+    }
+    print(questionList);
+    print(option);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var ht = MediaQuery.of(context).size.height;
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Stack(
+        children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height,
+              color: Colors.grey[200],
+              child: ListView(children: [
+                Container(
+                  height: (MediaQuery.of(context).size.height) / 2,
+                  decoration: BoxDecoration(
+                      color: Color(0xFF19a9e5),
+                      borderRadius: new BorderRadius.only(
+                          bottomLeft: const Radius.circular(80),
+                          bottomRight: const Radius.circular(80))),
+                )
+              ])),
+          Center(
+              child: Container(
+                  margin: EdgeInsets.only(top: 40),
+                  height: 120,
+                  child: Column(children: <Widget>[
+                    Stack(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 300),
+                          child: IconButton(
+                              icon: Icon(Icons.clear, color: Colors.white),
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (_) => SignupProcced(),
+                                ));
+                              }),
+                        ),
+                        Container(
+                            margin: const EdgeInsets.only(top: 10, left: 200),
+                            child: Text(
+                              "Health\nQuestionnarie",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.right,
+                            ))
+                      ],
+                    )
+                  ]))),
+          Center(
+            child: Container(
+              //height: 460,
+              //width: 290,
+              margin: new EdgeInsets.only(top: ht / 6),
+              child: Column(
+                children: <Widget>[
+                  Center(
+                      child: Container(
+                    margin: const EdgeInsets.only(bottom: 5, right: 240),
+                    child: RichText(
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: '$qno',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18)),
+                        TextSpan(
+                            text: '/20',
+                            style: TextStyle(color: Colors.black, fontSize: 14))
+                      ]),
+                    ),
+                  )),
+                  Divider(
+                    thickness: 1,
+                    color: Colors.black12,
+                    indent: 20,
+                    endIndent: 250,
+                  ),
+                  Container(
+                    alignment: Alignment.topCenter,
+                    child: Container(
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(top: 10),
+                      height: 400,
+                      //width: 220,
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        children: <Widget>[
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 5),
+                            child: Column(
+                              children: [
+                                Center(
+                                    child: Image.network(
+                                        'https://cdn2.iconfinder.com/data/icons/medicine-46/64/Medical-105-512.png',
+                                        height: 40)),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 8.0, left: 4, right: 4),
+                                  child: Text(
+                                    questionList[qindex],
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 18),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            alignment: Alignment.center,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text(chipList[_value.toInt()],
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 26),
+                                    textAlign: TextAlign.center),
+                                SizedBox(height: 80),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    //Text(chipList[0], softWrap: true),
+                                    Expanded(
+                                      child: Slider(
+                                        autofocus: true,
+                                        value: _value,
+                                        label: chipList[_value.toInt()],
+                                        min: 0.0,
+                                        max: 2.0,
+                                        divisions: 2,
+                                        onChangeStart: (double value) {
+                                          print('Start value is ' +
+                                              chipList[_value.toInt()]);
+                                        },
+                                        onChangeEnd: (double value) {
+                                          print('Finish value is ' +
+                                              chipList[_value.toInt()]);
+                                        },
+                                        onChanged: (double value) {
+                                          setState(() {
+                                            _value = value;
+                                            answered = true;
+                                            print('Selected value is ' +
+                                                chipList[_value.toInt()]);
+                                          });
+                                        },
+                                        activeColor:
+                                            Color(0xFF19a9e5),
+                                        inactiveColor: Colors.grey,
+                                      ),
+                                    ),
+                                    //Text(chipList[2], softWrap: true),
+                                  ],
+                                ),
+                                SizedBox(height: 40),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: <Widget>[
+                      Container(
+                        margin: const EdgeInsets.only(left: 10, top: 5),
+                        child: ElevatedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.grey)),
+                          onPressed: () {
+                            setState(() {
+                              qindex == 0 ? qindex = 0 : qindex -= 1;
+                              qindex == 0 ? qno = 1 : qno = qindex + 1;
+                            });
+                          },
+                          color: Colors.grey,
+                          textColor: Colors.white,
+                          child: Text("Back".toUpperCase(),
+                              style: TextStyle(fontSize: 14)),
+                        ),
+                      ),
+                      Spacer(flex: 1),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5, right: 10),
+                        child: ElevatedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(
+                                  color: Color(0xFF19a9e5))),
+                          onPressed: () {
+                            setState(() {
+                              qindex == 19 ? qindex = 19 : qindex += 1;
+                              qno = qindex + 1;
+                            });
+                          },
+                          color: Color(0xFF19a9e5),
+                          textColor: Colors.white,
+                          child: Text("Next".toUpperCase(),
+                              style: TextStyle(fontSize: 14)),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    ));
+  }
+}
+
+
+
+
+
+import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/models/survey.dart';
+import 'package:ihl/painters/backgroundPanter.dart';
+import 'package:ihl/utils/SpUtil.dart';
+import 'package:ihl/utils/app_colors.dart';
+import 'package:ihl/utils/commonUi.dart';
+import 'package:ihl/views/signup/proceed.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+List<String> chipList = ['Don\'t know', 'Yes', 'No'];
+int qindex = 0;
+var data = '';
+List qid = [];
+List questionList = [];
+List option = [];
+
+loadJson() async {
+  String surveyjson = await rootBundle.loadString('assets/survey.json');
+  final survey = surveyFromJson(surveyjson);
+  print(survey[0].option[0]['status']);
+  print(survey[0].option.length);
+  for (var i = 0; i < survey[0].option.length; i++) {
+    chipList.add(survey[0].option[i]['status']);
+  }
+  for (var i = 0; i < 20; i++) {
+    questionList.add(survey[i].name);
+  }
+  print(chipList);
+  print(questionList);
+  return survey;
+}
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  final iHLUrl = API.iHLUrl+'';
+  final ihlToken =
+      'hZH2vKcf1BPjROFM/DY0XAt89wo/09DXqsAzoCQC5QHYpXttcd5DNPOkFuhrPWcyT57DFFR9MnAdRAXoVw1j5yupkl+ps7+Z1UoM6uOrTxUBAA==';
+  bool answered = false;
+  double _value = 0;
+  int _selectedIndex;
+  var qno = 1;
+
+  void _initSp() async {
+    await SpUtil.getInstance();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initSp();
+    loadJson();
+    //getData();
+  }
+
+  String selectedChoice = "";
+  bool isSelected = false;
+
+  /*void getData() async{
+    data = await SpUtil.getString('survey');
+    var surveydata = jsonDecode(data);
+    for (var i = 0; i < surveydata.length; i++) {
+      questionList.add(surveydata[i]['name']);
+    }
+    print(questionList);
+    print(option);
+  }*/
+
+  void onAnswered(String qId, String answer) async {
+    final prefs = await SharedPreferences.getInstance();
+    var userData = prefs.get('data');
+    String apikey = prefs.get('auth_token');
+    var decodedResponse = jsonDecode(userData);
+    String iHLUserToken = decodedResponse['Token'];
+    String iHLUserId = decodedResponse['User']['id'];
+    final submitAnswerAPI = await _client.post(
+      iHLUrl + '/login/submit_answers?id=' + iHLUserId,
+      headers: {
+        'Content-Type': 'application/json',
+        'Token': 'bearer ' + iHLUserToken,
+        'ApiToken': apikey
+      },
+      body: jsonEncode(<String, String>{qId: answer}),
+    );
+    if (submitAnswerAPI.statusCode == 200) {
+      print(submitAnswerAPI.body);
+      if (submitAnswerAPI.body == null) {
+        throw Exception('Request body is not properly encoded');
+      } else {
+        print("Answer is submitted successfully");
+        print(submitAnswerAPI.body);
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var ht = MediaQuery.of(context).size.height;
+    return SafeArea(
+      top: true,
+      child: Scaffold(
+          body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            CustomPaint(
+              painter: BackgroundPainter(
+                primary: AppColors.primaryColor.withOpacity(0.7),
+                secondary: AppColors.primaryColor,
+              ),
+              child: Container(),
+            ),
+            Center(
+                child: Container(
+                    //margin: EdgeInsets.only(top: 20),
+                    height: 120,
+                    child: Column(children: <Widget>[
+                      Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 300),
+                            child: IconButton(
+                                icon: Icon(Icons.clear, color: Colors.white),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (_) => SignupProcced(),
+                                  ));
+                                }),
+                          ),
+                          Container(
+                              margin: const EdgeInsets.only(top: 30, left: 120),
+                              child: Text(
+                                "Health\nQuestionnarie",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              )),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 280),
+                            child: TextButton(
+                                child: Text('Skip',
+                                    style: TextStyle(color: Colors.white)),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (_) => SignupProcced(),
+                                  ));
+                                }),
+                          ),
+                        ],
+                      )
+                    ]))),
+            Center(
+              child: Container(
+                //height: 460,
+                //width: 290,
+                margin: new EdgeInsets.only(top: ht / 6),
+                child: Column(
+                  children: <Widget>[
+                    Center(
+                        child: Container(
+                      margin: const EdgeInsets.only(bottom: 5, right: 240),
+                      child: RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: '$qno',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 20)),
+                          TextSpan(
+                              text: '/20',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 14))
+                        ]),
+                      ),
+                    )),
+                    Divider(
+                      thickness: 1,
+                      color: Colors.black12,
+                      indent: 20,
+                      endIndent: 250,
+                    ),
+                    Card(
+                      margin: const EdgeInsets.only(top: 30),
+                      //elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.only(
+                              topLeft: const Radius.circular(50),
+                              topRight: const Radius.circular(50),
+                              bottomLeft: const Radius.circular(50),
+                              bottomRight: const Radius.circular(50))),
+                      color: CardColors.bgColor,
+                      child: Container(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(top: 50),
+                          height: 320,
+                          //width: 220,
+                          child: ListView(
+                            padding: EdgeInsets.zero,
+                            children: <Widget>[
+                              Container(
+                                margin: const EdgeInsets.only(bottom: 5),
+                                child: Column(
+                                  children: [
+                                    Center(
+                                        child: Image.network(
+                                            'https://cdn2.iconfinder.com/data/icons/medicine-46/64/Medical-105-512.png',
+                                            height: 40)),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                        top: 8.0,
+                                      ),
+                                      child: questionList.isEmpty
+                                          ? CircularProgressIndicator()
+                                          : Text(
+                                              questionList[qindex],
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 18),
+                                            ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Divider(
+                                thickness: 1,
+                                color: Colors.black12,
+                                indent: 50,
+                                endIndent: 50,
+                              ),
+                              SizedBox(height: 40),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(chipList[_value.toInt()],
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 26),
+                                        textAlign: TextAlign.center),
+                                    SizedBox(height: 40),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        //Text(chipList[0], softWrap: true),
+                                        Expanded(
+                                          child: Slider(
+                                            //autofocus: true,
+                                            value: _value,
+                                            label: chipList[_value.toInt()],
+                                            min: 0.0,
+                                            max: 2.0,
+                                            divisions: 2,
+                                            onChangeStart: (double value) {
+                                              print('Start value is ' +
+                                                  chipList[_value.toInt()]);
+                                            },
+                                            onChangeEnd: (double value) {
+                                              print('Finish value is ' +
+                                                  chipList[_value.toInt()]);
+                                            },
+                                            onChanged: (double value) {
+                                              setState(() {
+                                                _value = value;
+                                                answered = true;
+                                                print('Selected value is ' +
+                                                    chipList[_value.toInt()]);
+                                              });
+                                            },
+                                            activeColor:
+                                                Color(0xFF19a9e5),
+                                            inactiveColor: Colors.grey,
+                                          ),
+                                        ),
+                                        //Text(chipList[2], softWrap: true),
+                                      ],
+                                    ),
+                                    SizedBox(height: 40),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Container(
+                          margin: const EdgeInsets.only(left: 10, top: 5),
+                          child: ElevatedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.grey)),
+                            onPressed: () {
+                              setState(() {
+                                qindex == 0 ? qindex = 0 : qindex -= 1;
+                                qindex == 0 ? qno = 1 : qno = qindex + 1;
+                              });
+                            },
+                            color: Colors.grey,
+                            textColor: Colors.white,
+                            child: Text("Back".toUpperCase(),
+                                style: TextStyle(fontSize: 14)),
+                          ),
+                        ),
+                        Spacer(flex: 1),
+                        Container(
+                          margin: const EdgeInsets.only(top: 5, right: 10),
+                          child: ElevatedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                    color: Color(0xFF19a9e5))),
+                            onPressed: () {
+                              setState(() {
+                                qindex == 19 ? qindex = 19 : qindex += 1;
+                                qno = qindex + 1;
+                              });
+                            },
+                            color: Color(0xFF19a9e5),
+                            textColor: Colors.white,
+                            child: Text("Next".toUpperCase(),
+                                style: TextStyle(fontSize: 14)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Success
+Email: alice123@gmail.com
+Pwd:AliceThomas@1
+I/flutter (13000): Authorization Success
+I/flutter (13000): User Login Success
+I/flutter (13000): {
+I/flutter (13000):   "Token": "m7kkIjH7GW+UA3uZ5NdXJ91AL1MzXVOAV5TXYlyHrAzotOQPy8OllJAopucYYpoccarDx4mrLMm+mEYWN7QhjOweAEaEAtTyeYLT08vGkin15nzLlqwpcS21KJ0fUP4u00Phhfwr45hhe6SlyNzk6bbNkUBmhjUMjJ1Dg1UA57+kTLydX+GG36wB9ewHt2vLAQA=",
+I/flutter (13000):   "User": {
+I/flutter (13000):     "id": "bPSmjRYm1EaArqGYRU2KnA",
+I/flutter (13000):     "userInputWeightInKG": "83",
+I/flutter (13000):     "firstName": "Alice",
+I/flutter (13000):     "lastName": "Thomas",
+I/flutter (13000):     "dateOfBirth": "18-01-1977",
+I/flutter (13000):     "email": "alice123@gmail.com",
+I/flutter (13000):     "gender": "male",
+I/flutter (13000):     "heightMeters": 1.79,
+I/flutter (13000):     "fingerPrint": "",
+I/flutter (13000):     "aadhaarNumber": "",
+I/flutter (13000):     "higiScore": 200.0,
+I/flutter (13000):     "teleMedVendorName": "",
+I/flutter (13000):     "accountCreated": "\/Date(1595055956732+0530)\/",
+I/flutter (13000):     "terms": {
+I/flutter (13000):       "termsAgreedDate": "\/Date(1595055965276+0000)\/",
+I/flutter (13000):       "termsFileName": "termsofuse_v9_01122016"
+I/flutter (13000):     },
+I/flutter (13000):     "privacyAgreed": {
+I/flutter (13000):       "privacyAgreedDate": "\/Date(1595055965276+0000)\/",
+I/flutter (13000):       "privacyFileName": "privacypolicy_v7_08112014"
+I/flutter (13000):     "Notifications": {
+I/flutter (13000):       "EmailCheckins": "true",
+I/flutter (13000):       "EmailMonthlyRecap": "true",
+I/flutter (13000):       "EmailHigispher
+
+
+"{&quot;A1&quot;:0,&quot;A2&quot;:0,&quot;A3&quot;:0,&quot;A4&quot;:0,&quot;A5&quot;:0,&quot;A6&quot;:0,&quot;A7&quot;:0,&quot;A8&quot;:0,&quot;B1&quot;:0,&quot;B2&quot;:0,&quot;B3&quot;:0,&quot;B4&quot;:0,&quot;C1&quot;:0,&quot;C2&quot;:0,&quot;C3&quot;:0,&quot;C4&quot;:0,&quot;C5&quot;:0,&quot;D1&quot;:0,&quot;D2&quot;:0,&quot;D3&quot;:0,&quot;D4&quot;:0,&quot;E1&quot;:0,&quot;E2&quot;:0,&quot;E3&quot;:0,&quot;E4&quot;:0,&quot;T&quot;:0}"
+I/flutter (13000): Answer is submitted successfully
+I/flutter (13000): "{&quot;A1&quot;:0,&quot;A2&quot;:0,&quot;A3&quot;:0,&quot;A4&quot;:0,&quot;A5&quot;:0,&quot;A6&quot;:0,&quot;A7&quot;:0,&quot;A8&quot;:0,&quot;B1&quot;:0,&quot;B2&quot;:0,&quot;B3&quot;:0,&quot;B4&quot;:0,&quot;C1&quot;:0,&quot;C2&quot;:0,&quot;C3&quot;:0,&quot;C4&quot;:0,&quot;C5&quot;:0,&quot;D1&quot;:0,&quot;D2&quot;:0,&quot;D3&quot;:0,&quot;D4&quot;:0,&quot;E1&quot;:0,&quot;E2&quot;:0,&quot;E3&quot;:0,&quot;E4&quot;:0,&quot;T&quot;:0}"
+
+
+{id: bPSmjRYm1EaArqGYRU2KnA, lastUpdated: 1595068181, userInputWeightInKG: 83, firstName: Alice, lastName: Thomas, dateOfBirth: 18-01-1977, email: alice123@gmail.com, gender: male, heightMeters: 1.79, fingerPrint: , aadhaarNumber: , higiScore: 200.0, teleMedVendorName: , user_score: {A1: 0, A2: 0, A3: 0, A4: 0, A5: 0, A6: 0, A7: 0, A8: 0, B1: 0, B2: 0, B3: 0, B4: 0, C1: 0, C2: 0, C3: 0, C4: 0, C5: 0, D1: 0, D2: 0, D3: 0, D4: 0, E1: 0, E2: 0, E3: 0, E4: 0, T: 0}, accountCreated: /Date(1595055956732+0530)/, termsHistory: [{termsAgreedDate: /Date(1595055965276+0530)/, termsFileName: termsofuse_v9_01122016}], terms: {termsAgreedDate: /Date(1595085124992+0000)/, termsFileName: termsofuse_v9_01122016}, privacyAgreed: {privacyAgreedDate: /Date(1595085124992+0000)/, privacyFileName: privacypolicy_v7_08112014}, privacyAgreedHistory: [{privacyAgreedDate: /Date(1595055965276+0530)/, privacyFileName: privacypolicy_v7_08112014}], Notifications: {EmailCheckins: true, EmailMonthlyRecap: true, EmailHigisphereNotifications:
+
+
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_progress_button/flutter_progress_button.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:ihl/painters/backgroundPanter.dart';
+import 'package:ihl/utils/SpUtil.dart';
+import 'package:ihl/utils/app_colors.dart';
+import 'package:ihl/utils/commonUi.dart';
+import 'package:ihl/views/signup/proceed.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:ihl/models/surveyQuestion.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+/// TODO:
+/// Getting user details after registration
+/// On last Question change 'Next' in button to 'Proceed'
+/// API Check
+/// Store last attempted qus in prefs
+
+List<IconData> _icons = [
+  FontAwesomeIcons.heartbeat,
+  FontAwesomeIcons.tint,
+  FontAwesomeIcons.handHoldingHeart,
+  FontAwesomeIcons.weight,
+  FontAwesomeIcons.child,
+  FontAwesomeIcons.diagnoses,
+  FontAwesomeIcons.tachometerAlt,
+  FontAwesomeIcons.heartbeat,
+  FontAwesomeIcons.running,
+  FontAwesomeIcons.wineBottle,
+  FontAwesomeIcons.smoking,
+  FontAwesomeIcons.brain,
+  FontAwesomeIcons.pizzaSlice,
+  FontAwesomeIcons.carrot,
+  FontAwesomeIcons.appleAlt,
+  FontAwesomeIcons.coffee,
+  FontAwesomeIcons.utensils,
+  FontAwesomeIcons.handHoldingHeart,
+  FontAwesomeIcons.houseUser,
+  FontAwesomeIcons.dna,
+  FontAwesomeIcons.mapMarkerAlt
+];
+
+int qindex = 0;
+
+class SurveyUi extends StatefulWidget {
+  SurveyUi({Key key}) : super(key: key);
+
+  @override
+  _SurveyUiState createState() => _SurveyUiState();
+}
+
+class _SurveyUiState extends State<SurveyUi> {
+  final iHLUrl = API.iHLUrl+'';
+  final ihlToken =
+      'hZH2vKcf1BPjROFM/DY0XAt89wo/09DXqsAzoCQC5QHYpXttcd5DNPOkFuhrPWcyT57DFFR9MnAdRAXoVw1j5yupkl+ps7+Z1UoM6uOrTxUBAA==';
+  bool answered = false;
+  bool loading = true;
+  bool isSubmitted = false;
+  double _value = 0;
+  String selectedChoice = "";
+  bool isSelected = false;
+  int questionIndex;
+  List<SurveyQuestion> _surveyQuestion = [];
+  Map<String, String> qMap;
+
+  void _initSp() async {
+    await SpUtil.getInstance();
+  }
+
+  getQuestion() async {
+    String surveyjson = await rootBundle.loadString('assets/survey.json');
+    List ok = jsonDecode(surveyjson);
+    ok = ok;
+    _surveyQuestion = [];
+
+    ok.forEach((element) {
+      _surveyQuestion.add(SurveyQuestion(element));
+    });
+    loading = false;
+    setState(() {});
+  }
+
+  void onAnswered(String qId, String answer) async {
+    final prefs = await SharedPreferences.getInstance();
+    var userData = prefs.get('data');
+    String apikey = prefs.get('auth_token');
+    var decodedResponse = jsonDecode(userData);
+    String iHLUserToken = decodedResponse['Token'];
+    String iHLUserId = decodedResponse['User']['id'];
+    final submitAnswerAPI = await http.post(
+      iHLUrl + '/login/submit_answers?id=' + iHLUserId,
+      headers: {
+        'Content-Type': 'application/json',
+        'Token': 'bearer ' + iHLUserToken,
+        'ApiToken': apikey
+      },
+      body: jsonEncode(<String, String>{qId: answer}),
+    );
+    if (submitAnswerAPI.statusCode == 200) {
+      print(submitAnswerAPI.body);
+      if (submitAnswerAPI.body == null) {
+        throw Exception('Request body is not properly encoded');
+      } else {
+        print("Answer is submitted successfully");
+        print(submitAnswerAPI.body);
+        qMap[qId] = answer;
+        SpUtil.remove('qAns');
+        SpUtil.putObject('qAns', qMap);
+        // Get by SpUtil.getObject('qAns');
+        isSubmitted = true;
+      }
+    }
+  }
+
+  void onBackButtonPressed() {
+    if (qindex > 0) {
+      setState(() {
+        _value = 0;
+        qindex--;
+      });
+    }
+  }
+
+  void onNextButtonPressed() {
+    //Main question
+    setState(() {
+      onAnswered(_surveyQuestion[qindex].qid,
+          _surveyQuestion[qindex].options[_value.toInt()].mainAnswer.status);
+    });
+    //Follow up question
+    setState(() {
+      _surveyQuestion[qindex]
+          .selectFromIndex(_value.toInt(), context)
+          .then((val) {
+        if (val != null) {
+          print(val.qid);
+          print(val.answer.mainAnswer.value);
+          onAnswered(val.qid, val.answer.mainAnswer.value);
+        }
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initSp();
+    getQuestion();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (loading) {
+      return Dialog(
+        child: Container(
+          height: 100,
+          child: Center(
+            child: new Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                new CircularProgressIndicator(),
+                SizedBox(
+                  width: 10,
+                ),
+                new Text("Loading... Please wait"),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+    var ht = MediaQuery.of(context).size.height;
+    return SafeArea(
+      top: true,
+      child: Scaffold(
+          body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            CustomPaint(
+              painter: BackgroundPainter(
+                primary: AppColors.primaryColor.withOpacity(0.7),
+                secondary: AppColors.primaryColor,
+              ),
+              child: Container(),
+            ),
+            Center(
+                child: Container(
+                    //margin: EdgeInsets.only(top: 20),
+                    height: 120,
+                    child: Column(children: <Widget>[
+                      Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 300),
+                            child: IconButton(
+                                icon: Icon(Icons.clear, color: Colors.white),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (_) => SignupProcced(),
+                                  ));
+                                }),
+                          ),
+                          Container(
+                              margin: const EdgeInsets.only(top: 30, left: 120),
+                              child: Text(
+                                "Health\nQuestionnarie",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              )),
+                        ],
+                      )
+                    ]))),
+            Center(
+              child: Container(
+                //height: 460,
+                //width: 290,
+                margin: new EdgeInsets.only(top: ht / 6),
+                child: Column(
+                  children: <Widget>[
+                    Center(
+                        child: Container(
+                      margin: const EdgeInsets.only(bottom: 5, right: 240),
+                      child: RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: (qindex + 1).toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 24)),
+                          TextSpan(
+                              text: '/20',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 14))
+                        ]),
+                      ),
+                    )),
+                    Divider(
+                      thickness: 1,
+                      color: Colors.black12,
+                      indent: 20,
+                      endIndent: 250,
+                    ),
+                    Card(
+                      margin: const EdgeInsets.only(top: 30),
+                      //elevation: 6,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.only(
+                              topLeft: const Radius.circular(50),
+                              topRight: const Radius.circular(50),
+                              bottomLeft: const Radius.circular(50),
+                              bottomRight: const Radius.circular(50))),
+                      color: CardColors.bgColor,
+                      child: Container(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.only(top: 50),
+                          height: 320,
+                          //width: 220,
+                          child: ListView(
+                            padding: EdgeInsets.zero,
+                            children: <Widget>[
+                              Container(
+                                margin: const EdgeInsets.only(bottom: 5),
+                                child: Column(
+                                  children: [
+                                    Center(
+                                        child: Icon(
+                                      _icons[qindex],
+                                      color: Color(0xFF19a9e5),
+                                    )),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 8.0, left: 8, right: 8),
+                                      child: _surveyQuestion == null ||
+                                              _surveyQuestion.isEmpty
+                                          ? CircularProgressIndicator()
+                                          : Text(
+                                              _surveyQuestion[qindex].question,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 18),
+                                            ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Divider(
+                                thickness: 1,
+                                color: Colors.black12,
+                                indent: 50,
+                                endIndent: 50,
+                              ),
+                              SizedBox(height: 40),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(
+                                        _surveyQuestion[qindex]
+                                            .options[_value.toInt()]
+                                            .mainAnswer
+                                            .status,
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 26),
+                                        textAlign: TextAlign.center),
+                                    SizedBox(height: 40),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        //Text(chipList[0], softWrap: true),
+                                        Expanded(
+                                          child: Slider(
+                                            //autofocus: true,
+                                            value: _value,
+                                            label: _surveyQuestion[qindex]
+                                                .options[_value.toInt()]
+                                                .mainAnswer
+                                                .status,
+                                            min: 0,
+                                            max: _surveyQuestion[qindex]
+                                                    .options
+                                                    .length
+                                                    .toDouble() -
+                                                1,
+                                            divisions: _surveyQuestion[qindex]
+                                                    .options
+                                                    .length
+                                                    .toInt() -
+                                                1,
+                                            onChangeStart: (double value) {
+                                              print('Start value is ' +
+                                                  _surveyQuestion[qindex]
+                                                      .options[_value.toInt()]
+                                                      .mainAnswer
+                                                      .status);
+                                            },
+                                            onChangeEnd: (double value) {
+                                              print('Finish value is ' +
+                                                  _surveyQuestion[qindex]
+                                                      .options[_value.toInt()]
+                                                      .mainAnswer
+                                                      .status);
+                                            },
+                                            onChanged: (double value) {
+                                              setState(() {
+                                                _value = value;
+                                                answered = true;
+                                                print('Selected value is ' +
+                                                    _surveyQuestion[qindex]
+                                                        .options[_value.toInt()]
+                                                        .mainAnswer
+                                                        .status);
+                                              });
+                                            },
+                                            activeColor:
+                                                Color(0xFF19a9e5),
+                                            inactiveColor: Colors.grey,
+                                          ),
+                                        ),
+                                        //Text(chipList[2], softWrap: true),
+                                      ],
+                                    ),
+                                    SizedBox(height: 40),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Container(
+                          margin: const EdgeInsets.only(left: 10, top: 5),
+                          child: ElevatedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.grey)),
+                            onPressed: () {
+                              setState(() {
+                                onBackButtonPressed();
+                              });
+                            },
+                            color: Colors.grey,
+                            textColor: Colors.white,
+                            child: Text("Back".toUpperCase(),
+                                style: TextStyle(fontSize: 14)),
+                          ),
+                        ),
+                        Spacer(flex: 1),
+                        Container(
+                          width: 90,
+                          height: 37,
+                          margin: const EdgeInsets.only(bottom: 2, right: 10),
+                          child: ProgressButton(
+                            defaultWidget: const Text('NEXT',
+                                style: TextStyle(color: Colors.white)),
+                            progressWidget: const CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                    Colors.white)),
+                            color: Color(0xFF19a9e5),
+                            borderRadius: 18,
+                            animate: true,
+                            onPressed: () async {
+                              setState(() {
+                                onNextButtonPressed();
+                              });
+                              await Future.delayed(
+                                  const Duration(milliseconds: 5000), () {
+                                if (qindex < 19) {
+                                  setState(() {
+                                    qindex++;
+                                    _value = 0;
+                                  });
+                                } else {
+                                  /*Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => WaitingScreen(),
+        ),
+      );*/
+                                }
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  void _modalBottomSheetMenu() {
+    showModalBottomSheet(
+        context: context,
+        backgroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
+        ),
+        builder: (context) {
+          return Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                ListTile(
+                  leading: Icon(Icons.face_retouching_natural),
+                  //trailing: TextField(),
+                  title: Text('Mesaage Doctor'),
+                  onTap: () {
+                    chatbox();
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.send),
+                  title: Text('Send Medical files'),
+                  onTap: () {},
+                ),
+              ],
+            ),
+          );
+        });
+  }

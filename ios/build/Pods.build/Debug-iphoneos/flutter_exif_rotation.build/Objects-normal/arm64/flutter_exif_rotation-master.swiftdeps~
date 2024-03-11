@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "d224c8795a0eb20e2639c3c5bb03654c99baf66a612112a827ed11a0dda49864"
+build_start_time: [1656075401, 747378826]
+build_end_time: [1656075405, 42709827]
+inputs:
+  ? "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_exif_rotation-0.4.3/ios/Classes/SwiftFlutterExifRotationPlugin.swift"
+  : [1615914344, 0]

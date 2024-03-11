@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "a445945a21fa22c4d62b8eb39c2cbab4e65a870358daa702543c7545710a188a"
+build_start_time: [1669706748, 935657024]
+build_end_time: [1669706763, 455500125]
+inputs:
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/jitsi_meet-4.0.0/ios/Classes/JitsiViewController.swift": [1666097063, 934739589]
+  "/Applications/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/jitsi_meet-4.0.0/ios/Classes/SwiftJitsiMeetPlugin.swift": [1666096913, 572284460]

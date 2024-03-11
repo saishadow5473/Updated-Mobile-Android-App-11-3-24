@@ -1,0 +1,104 @@
+class Routes {
+  Routes._();
+  static const String Welcome = 'Welcome';
+  static const String Onboard = 'Onboard';
+  static const String Sname = 'Name';
+  static const String Semail = 'Email';
+  static const String Cemail = 'CEmail';
+  static const String Eemail = 'EEmail';
+  static const String Epassword = 'Epassword';
+
+  static const String Cname = 'CName';
+  static const String Cpassword = 'CPassword';
+  static const String Cdob = 'CDateofBirth';
+  static const String Spwd = 'Password';
+  static const String Smob = 'mob';
+  static const String Cmobilenumber = 'CMobileNumber';
+  static const String Sheight = 'Height';
+  static const String Sweight = 'Weight';
+  static const String Cheight = 'CHeight';
+  static const String Cweight = 'CWeight';
+
+  static const String Sgender = 'Gender';
+  static const String Cgender = 'CGender';
+
+  static const String Sdob = 'dob';
+  static const String Spic = 'Pic';
+  static const String Cpic = 'CPic';
+  static const String CpicNew = 'CPicNew';
+  static const String CProceed = 'CProceed';
+  static const String JointAccount = 'Joint Account';
+  static const String LinkAccountDash = 'Link Account Dash';
+
+  static const String SProceed = 'Proceed';
+  static const String Survey = 'Survey';
+  static const String SurveyProceed = 'Survey Proceed';
+  static const String Home = 'Home';
+  static const String HomeDashBoard = 'HomeDashBoard';
+  static const String Register = 'Register';
+  static const String Login = 'Login';
+  static const String Vitals = 'Vital';
+  static const String Profile = 'Profile';
+  static const String ProfileScreenSettings = 'ProfileScreenSettings';
+  static const String ForgotPwd = 'ForgotPwd';
+  static const String Aff = 'Aff';
+  static const String CAff = 'CAff';
+  static const String Gaccounts = 'Gaccounts';
+  static const String Laccountssettings = 'Laccountssettings';
+  static const String VerifyMobile = 'VerifyMobile';
+  static const String CVerifyMobile = 'CVerifyMobile';
+
+  static const String TeleConDashboard = 'Teleconsultations Dashboard';
+  static const String TeleDashboard = 'Tele Dashboard';
+  static const String ConsultVideo = 'consultation Video';
+  static const String BookAppointment = 'BookAppointment';
+  static const String BookClass = 'Book Class';
+  static const String ConsultationType = 'Consultation Type';
+  static const String AllSpecialtyType = 'All Specialty Type';
+  static const String SpecialityType = 'Speciality Type';
+  static const String SelectConsultant = 'Select Consultant';
+  static const String CallWaitingScreen = 'Videocall Waiting screen';
+  static const String MyConsultant = 'My Consultant';
+  static const String Followup = 'Follow up';
+  static const String ConfirmVisit = 'Confirm Visit';
+  static const String ConsultationHistory = "Consultation History";
+  static const String MyAppointments = 'My Appointments';
+  static const String MyMedicalFiles = 'My Medical Files';
+  static const String VerifyPhoneOTP = 'Verify Phone OTP';
+  static const String historyDetails = 'History Details';
+  static const String Telepayment = 'Tele Payment';
+  static const String PaymentSuccess = 'Payment Success';
+  static const String PaymentFailure = 'Payment Fail';
+  static const String ConsultSummary = 'ConsultSummary';
+  static const String SelectClass = 'Select Class';
+  static const String StepCounter = 'Step Tracker home';
+  static const String TrackSteps = 'Track Activity';
+  static const String MySubscriptions = 'My Subscriptions';
+  static const String WellnessCart = 'Wellness Cart';
+  static const String PrescriptionDetails = 'Prescription Details';
+  static const String SubscriptionPaymentPage = "Subscription Payment Page";
+  static const String SubscriptionPaymentSuccess =
+      "Subscription Payment Success";
+  static const String SubscriptionPaymentFailed = "Subscription Payment Failed";
+  static const String ConsultStages = "Consultation Stages";
+  static const String ConsultationHistorySummary =
+      "Consultation History Summary";
+  static const String HealthJournal = 'healthJournal';
+  static const String AddFood = 'addFood';
+  static const String AddCustomFood = 'addCustomFood';
+  static const String EditFoodLog = 'editFoodlog';
+  static const String EditCustomFoodLog = 'editCustomFoodLog';
+  static const String TodaysMealView = 'todaysMealView';
+  static const String MealTypeScreen = 'mealTypeScreen';
+  static const String CreateNewReceipe = 'createNewRecepie';
+  static const String EditReceipe = 'editReceipe';
+  static const String ViewFoodDetails = 'viewFoodDetails';
+  static const String ViewCustomFoodDetails = 'viewCustomFoodDetails';
+  static const String ViewIngredientDetails = 'viewIngriedientDetails';
+  static const String AddActivity = 'addActivity';
+  static const String ViewActivityDetails = 'viewActivityDetails';
+  static const String EditActivity = 'editActivity';
+  static const String TodaysActivityList = 'todaysActivityList';
+  static const String ViewTodayActivityLog = 'viewTodayActivityLog';
+  static const String CardiovascularSurvey = 'cardiovascularSurvey';
+}

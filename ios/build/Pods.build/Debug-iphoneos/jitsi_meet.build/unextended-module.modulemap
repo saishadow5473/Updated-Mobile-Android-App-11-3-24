@@ -1,0 +1,10 @@
+framework module jitsi_meet {
+  umbrella header "jitsi_meet-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module jitsi_meet.__Swift {
+    exclude header "jitsi_meet-Swift.h"
+}
